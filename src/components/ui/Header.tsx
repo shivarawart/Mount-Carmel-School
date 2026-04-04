@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
-
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -12,7 +12,6 @@ const navLinks = [
   { name: "Admissions", path: "/admissions" },
   { name: "Facilities", path: "/facilities" },
   { name: "Gallery", path: "/gallery" },
-
   { name: "Contact", path: "/contact" },
 ];
 
@@ -20,9 +19,9 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
 
-  // GSAP animation
+  // GSAP animation for mobile menu
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && navRef.current) {
       gsap.fromTo(
         navRef.current,
         { y: -50, opacity: 0 },
@@ -34,7 +33,6 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
@@ -57,6 +55,34 @@ export default function Header() {
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all group-hover:w-full"></span>
             </a>
           ))}
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4 ml-6">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 transition"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-500 hover:text-pink-700 transition"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-500 hover:text-green-700 transition"
+            >
+              <FaWhatsapp />
+            </a>
+          </div>
         </nav>
 
         {/* Mobile Button */}
@@ -85,6 +111,34 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
+
+            {/* Social Icons Mobile */}
+            <div className="flex items-center gap-4 mt-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-500 hover:text-pink-700 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 hover:text-green-700 transition"
+              >
+                <FaWhatsapp />
+              </a>
+            </div>
           </div>
         </div>
       )}

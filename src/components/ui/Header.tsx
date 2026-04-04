@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Admissions", path: "/admissions" },
   { name: "Facilities", path: "/facilities" },
   { name: "Gallery", path: "/gallery" },
+
   { name: "Contact", path: "/contact" },
 ];
 

@@ -1,0 +1,16 @@
+
+@import "tailwindcss";
+/* src/index.css */
+
+/* Optional: Add your custom styles here */
+@layer base {
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+}
+
+.hero-bg {
+  background: linear-gradient(rgba(0, 48, 135, 0.78), rgba(0, 48, 135, 0.78)),
+              url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2070') center/cover no-repeat;
+}

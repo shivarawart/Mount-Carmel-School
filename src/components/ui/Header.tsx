@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
-import clsx from "clsx";
 
 const navLinks = [
   { name: "Home", path: "/" },

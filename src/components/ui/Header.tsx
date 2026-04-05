@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom"; // ✅ IMPORTANT
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -18,13 +19,12 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
 
-  // GSAP animation
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && navRef.current) {
       gsap.fromTo(
         navRef.current,
         { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }
+        { y: 0, opacity: 1, duration: 0.5 }
       );
     }
   }, [isOpen]);
@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        
+
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
@@ -46,14 +46,14 @@ export default function Header() {
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.path}
+              to={link.path}   // ✅ FIXED
               className="relative text-gray-700 hover:text-blue-600 transition font-medium group"
             >
               {link.name}
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all group-hover:w-full"></span>
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -68,20 +68,17 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div
-          ref={navRef}
-          className="md:hidden bg-white shadow-lg px-6 pb-6"
-        >
+        <div ref={navRef} className="md:hidden bg-white shadow-lg px-6 pb-6">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.path}
+                to={link.path}   // ✅ FIXED
                 onClick={() => setIsOpen(false)}
                 className="text-gray-700 font-medium hover:text-blue-600 transition"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

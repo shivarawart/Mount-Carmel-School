@@ -164,7 +164,7 @@ const AcademicsPage = () => {
             {
               title: "Smart Classes",
               desc: "Interactive digital boards and multimedia tools that make learning visual and engaging.",
-              img: "https://images.unsplash.com/photo-1581091870627-3c06c0e8a0c9",
+              img: "img/digital.png",
             },
             {
               title: "Collaborative Learning",

@@ -14,37 +14,37 @@ const facilitiesData = [
     title: "Smart Classrooms",
     description: "Interactive digital learning with modern technology",
     icon: "🖥️",
-    image: "https://tse1.mm.bing.net/th/id/OIP.VYpPlWqgUw1qea5ZiC1JDQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+    image: "img/smartc.png",
   },
   {
     title: "Science Labs",
     description: "Hands-on experiments with state-of-the-art equipment",
     icon: "🔬",
-    image: "https://tse1.mm.bing.net/th/id/OIP.VYpPlWqgUw1qea5ZiC1JDQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+    image: "img/lab.png",
   },
   {
     title: "Library",
     description: "Extensive collection of books and digital resources",
     icon: "📚",
-    image: "https://tse1.mm.bing.net/th/id/OIP.VYpPlWqgUw1qea5ZiC1JDQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+    image: "img/liabrary.png",
   },
   {
     title: "Playground & Sports",
     description: "Encouraging physical fitness and teamwork",
     icon: "⚽",
-    image: "https://tse1.mm.bing.net/th/id/OIP.VYpPlWqgUw1qea5ZiC1JDQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+    image: "img/playg.png",
   },
   {
     title: "Transport Facility",
     description: "Safe and convenient travel to and from school",
     icon: "🚌",
-    image: "https://tse1.mm.bing.net/th/id/OIP.VYpPlWqgUw1qea5ZiC1JDQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+    image: "img/trans.png",
   },
   {
     title: "CCTV Surveillance",
     description: "Ensuring a secure and safe campus environment",
     icon: "📹",
-    image: "https://tse1.mm.bing.net/th/id/OIP.VYpPlWqgUw1qea5ZiC1JDQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+    image: "img/cctv.png",
   },
 ];
 

@@ -85,8 +85,8 @@ const AboutPage = () => {
               About Mount Carmel International School
             </h2>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              We are committed to delivering excellence in education by combining 
-              academic rigor with strong moral values, creativity, and real-world 
+              We are committed to delivering excellence in education by combining
+              academic rigor with strong moral values, creativity, and real-world
               learning experiences that prepare students for a successful future.
             </p>
           </div>
@@ -135,14 +135,14 @@ const AboutPage = () => {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Principal’s Message
             </h2>
-            
+
             <div className="space-y-5 text-lg text-gray-600 leading-relaxed">
               <p>
-                Education is not just about acquiring knowledge — it is about 
+                Education is not just about acquiring knowledge — it is about
                 shaping character, building confidence, and nurturing future leaders.
               </p>
               <p>
-                At Mount Carmel, we strive to empower every student with the skills, 
+                At Mount Carmel, we strive to empower every student with the skills,
                 values, and mindset they need to excel in an ever-changing world.
               </p>
             </div>
@@ -166,17 +166,18 @@ const AboutPage = () => {
             {
               title: "Academic Excellence",
               desc: "Consistent top results in board examinations with many students scoring 95%+",
-              img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+              img: "/img/twelth result.png",
             },
             {
               title: "Sports Achievements",
               desc: "Multiple trophies in inter-school and state-level competitions",
-              img: "https://images.unsplash.com/photo-1517649763962-0c623066013b",
+              img: "/img/sports.png"
+
             },
             {
               title: "Olympiad Winners",
               desc: "Numerous students bringing laurels in national and international Olympiads",
-              img: "https://images.unsplash.com/photo-1509062522246-3755977927d7",
+              img: "/img/olmp.png",
             },
           ].map((item, i) => (
             <div key={i} className="reveal achievement-card group">
@@ -188,11 +189,11 @@ const AboutPage = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
-                
-                <h3 className="font-semibold text-white text-2xl mb-3 tracking-tight">
+
+                <h3 className="font-semibold text-black/80 text-2xl mb-3 tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-white/90 leading-relaxed flex-grow">
+                <p className="text-black/70 leading-relaxed flex-grow">
                   {item.desc}
                 </p>
               </div>

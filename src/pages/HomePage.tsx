@@ -91,7 +91,7 @@ const HomePage = () => {
           <Card 
             title="Library Space"
             description="Peaceful reading and digital learning zone"
-            image="https://images.unsplash.com/photo-1521587765099-8835e7201186"
+            image="img/liabrary.png"
           />
 
           <Card 
@@ -141,13 +141,13 @@ const HomePage = () => {
           <Card 
             title="Annual Function"
             description="Grand celebration coming soon"
-            image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30"
+            image="img/anualday.png"
           />
 
           <Card 
             title="Sports Day"
             description="Register for upcoming events"
-            image="https://images.unsplash.com/photo-1546519638-68e109498ffc"
+            image="img/sportsDay.png"
           />
 
         </div>

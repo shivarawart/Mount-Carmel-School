@@ -16,13 +16,13 @@ type GalleryItem = {
 };
 
 const galleryData: GalleryItem[] = [
-  { title: "Annual Day Celebration", category: "Annual Day", image: "https://www.japannakama.co.uk/wp-content/uploads/2025/02/InsideJapaneseSchools-scaled.webp" },
-  { title: "Sports Meet 2025", category: "Sports", image: "https://www.japannakama.co.uk/wp-content/uploads/2025/02/InsideJapaneseSchools-scaled.webp" },
-  { title: "Science Fair", category: "Classroom", image: "https://www.japannakama.co.uk/wp-content/uploads/2025/02/InsideJapaneseSchools-scaled.webp" },
-  { title: "Art & Craft Exhibition", category: "Celebration", image: "https://www.japannakama.co.uk/wp-content/uploads/2025/02/InsideJapaneseSchools-scaled.webp" },
-  { title: "Football Tournament", category: "Sports", image: "https://www.japannakama.co.uk/wp-content/uploads/2025/02/InsideJapaneseSchools-scaled.webp" },
-  { title: "Cultural Fest", category: "Celebration", image: "https://www.japannakama.co.uk/wp-content/uploads/2025/02/InsideJapaneseSchools-scaled.webp" },
-  { title: "Interactive Learning", category: "Classroom", image: "https://www.japannakama.co.uk/wp-content/uploads/2025/02/InsideJapaneseSchools-scaled.webp" },
+  { title: "Annual Day Celebration", category: "Annual Day", image: "img/anualday.png" },
+  { title: "Sports Meet 2025", category: "Sports", image: "img/sportsDay.png" },
+  { title: "Science Fair", category: "Classroom", image: "img/science.png" },
+  { title: "Art & Craft Exhibition", category: "Celebration", image: "img/art.png" },
+  { title: "Athletics", category: "Sports", image: "img/race.png" },
+  { title: "Cultural Fest", category: "Celebration", image: "img/culture.png" },
+  { title: "Interactive Learning", category: "Classroom", image: "img/smartc.png" },
 ];
 
 const categories = ["All", "Annual Day", "Sports", "Celebration", "Classroom"];

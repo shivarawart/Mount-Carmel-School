@@ -71,15 +71,15 @@ const ContactMandatoryPage = () => {
 
     try {
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",      // ← Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID",     // ← Replace with your EmailJS Template ID
+        "service_1ru1mkm",   // Service ID
+        "template_ucauo1a",  // Template ID
         formRef.current,
-        "YOUR_PUBLIC_KEY"       // ← Replace with your EmailJS Public Key
+        "u2FIr6vPNxHFy_Zkc"    // Public Key (from API Keys)
       );
 
       setSubmitted(true);
       formRef.current.reset();
-      
+
       // Auto hide success message after 5 seconds
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
@@ -146,9 +146,8 @@ const ContactMandatoryPage = () => {
                 </span>
               </button>
               <div
-                className={`px-8 pb-8 text-gray-600 leading-relaxed transition-all duration-500 overflow-hidden ${
-                  activeDisclosure === idx ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
+                className={`px-8 pb-8 text-gray-600 leading-relaxed transition-all duration-500 overflow-hidden ${activeDisclosure === idx ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  }`}
               >
                 {item.content}
               </div>
@@ -183,6 +182,13 @@ const ContactMandatoryPage = () => {
                   required
                   className="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition placeholder:text-gray-500"
                 />
+                <input
+                  type="tel"
+                  name="user_phone"
+                  placeholder="Contact Number"
+                  required
+                />
+
               </div>
 
               <input

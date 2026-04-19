@@ -7,6 +7,7 @@ import Banner from "../../components/ui/Banner";
 import Section from "../../components/ui/Section";
 import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
+import PhilosophySection from "../../components/ui/PhilosophySection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,7 +105,7 @@ const AboutPage = () => {
             <Card
               title="Our Vision"
               description="To create confident, responsible, and lifelong learners who contribute positively to society."
-              image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
+              image="public/assets/image7.jpeg"
             />
           </div>
           <div className="reveal">
@@ -118,42 +119,8 @@ const AboutPage = () => {
       </Section>
 
       {/* 👩‍🏫 PRINCIPAL’S MESSAGE */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          {/* Image with Parallax */}
-          <div className="relative overflow-hidden rounded-3xl shadow-2xl reveal">
-            <img
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754"
-              alt="Principal"
-              className="w-full h-[380px] md:h-[520px] object-cover parallax"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-          </div>
-
-          {/* Text Content */}
-          <div className="reveal space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Principal’s Message
-            </h2>
-
-            <div className="space-y-5 text-lg text-gray-600 leading-relaxed">
-              <p>
-                Education is not just about acquiring knowledge — it is about
-                shaping character, building confidence, and nurturing future leaders.
-              </p>
-              <p>
-                At Mount Carmel, we strive to empower every student with the skills,
-                values, and mindset they need to excel in an ever-changing world.
-              </p>
-            </div>
-
-            <Button size="lg" variant="primary">
-              Read Full Message
-            </Button>
-          </div>
-        </div>
-      </section>
-
+     
+     <PhilosophySection />
       {/* 🏆 ACHIEVEMENTS - Enhanced Glass Cards */}
       <Section
         title="Our Achievements"

@@ -174,7 +174,7 @@ const AcademicsPage = () => {
             {
               title: "Experiential Learning",
               desc: "Hands-on activities, field trips, and real-world projects for deeper understanding.",
-              img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
+              img: "public/assets/image23.jpeg",
             },
           ].map((item, i) => (
             <div key={i} className="reveal teaching-card group">

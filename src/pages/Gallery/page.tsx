@@ -29,83 +29,108 @@ const categories = ["All", "Annual Day", "Sports", "Celebration", "Classroom"];
 
 const GalleryPage = () => {
   const pageRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.utils.toArray(".gallery-reveal").forEach((el: any, i) => {
-        gsap.fromTo(
-          el,
-          { y: 50, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            delay: i * 0.1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",
-            },
-          }
-        );
-      });
-    }, pageRef);
+  const filteredData =
+    selectedCategory === "All"
+      ? galleryData
+      : galleryData.filter((item) => item.category === selectedCategory);
 
-    return () => ctx.revert();
+  // 🔥 Animate on filter change
+  useEffect(() => {
+    if (!gridRef.current) return;
+
+    const items = gridRef.current.querySelectorAll(".gallery-item");
+
+    gsap.fromTo(
+      items,
+      { y: 40, opacity: 0, scale: 0.95 },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: "power3.out",
+      }
+    );
   }, [selectedCategory]);
 
-  const filteredData = selectedCategory === "All" ? galleryData : galleryData.filter(item => item.category === selectedCategory);
-
   return (
-    <main ref={pageRef} className="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900 overflow-x-hidden">
-
+    <main
+      ref={pageRef}
+      className="bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-900 overflow-x-hidden"
+    >
       {/* 🔥 HERO */}
       <Banner />
 
-      {/* 🗂 CATEGORY TABS */}
+      {/* 🖼 GALLERY */}
       <Section
         title="Gallery"
-        subtitle="Explore memorable moments from our school"
+        subtitle="Moments that define our journey"
         center
-        className="py-16"
+        className="py-20"
       >
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {/* 🔘 CATEGORY TABS */}
+        <div className="flex flex-wrap justify-center gap-3 mb-14">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`relative px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === cat
-                  ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg"
-                  : "bg-white/60 backdrop-blur-md text-gray-800 hover:bg-indigo-200 hover:text-white"
+                  ? "text-white"
+                  : "text-gray-700 hover:text-indigo-600"
               }`}
             >
+              {/* active background */}
+              {selectedCategory === cat && (
+                <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg -z-10" />
+              )}
+
               {cat}
             </button>
           ))}
         </div>
 
-        {/* 🖼 IMAGE GRID */}
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        {/* 🧊 GRID */}
+        <div
+          ref={gridRef}
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
+        >
           {filteredData.map((item, i) => (
             <div
               key={i}
-              className="gallery-reveal relative group rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transform transition-all hover:-translate-y-2 bg-white/30 backdrop-blur-xl border border-white/20 cursor-pointer"
+              className="gallery-item group relative overflow-hidden rounded-3xl"
             >
-              {/* Background image */}
-              <div className="absolute inset-0">
+              {/* 🌌 glow */}
+              <div className="absolute inset-0 bg-indigo-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500" />
+
+              {/* 🖼 IMAGE */}
+              <div className="relative h-[260px] md:h-[320px] overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-500"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+
+                {/* 🎨 overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
               </div>
 
-              {/* Overlay */}
-              <div className="relative p-6 flex flex-col justify-end h-64">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 drop-shadow-md">{item.title}</h3>
-                <p className="text-gray-700 font-medium drop-shadow-sm">{item.category}</p>
+              {/* 🧠 CONTENT (hover reveal) */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-all duration-500">
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm text-white/80 mt-1">
+                  {item.category}
+                </p>
+
+                {/* accent line */}
+                <div className="mt-3 h-[2px] w-8 bg-white/80 group-hover:w-16 transition-all duration-500" />
               </div>
             </div>
           ))}

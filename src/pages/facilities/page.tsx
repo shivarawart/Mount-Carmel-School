@@ -87,32 +87,55 @@ const FacilitiesPage = () => {
         center
         className="py-24"
       >
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
 
-          {facilitiesData.map((facility, i) => (
-            <div
-              key={i}
-              className="reveal relative group rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1 bg-white/50 backdrop-blur-xl border border-white/30 cursor-pointer"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0">
-                <img
-                  src={facility.image}
-                  alt={facility.title}
-                  className="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-500"
-                />
-              </div>
+  {facilitiesData.map((facility, i) => (
+    <div
+      key={i}
+      className="reveal group relative rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-3"
+    >
+      {/* 🌌 Glow Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition duration-500" />
 
-              {/* Overlay */}
-              <div className="relative p-8 flex flex-col items-start gap-4">
-                <div className="text-4xl">{facility.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900">{facility.title}</h3>
-                <p className="text-gray-700">{facility.description}</p>
-              </div>
-            </div>
-          ))}
+      {/* 🪟 Glass Card */}
+      <div className="relative h-full rounded-3xl border border-white/20 bg-white/60 backdrop-blur-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 overflow-hidden">
 
+        {/* 🖼 IMAGE */}
+        <div className="relative h-56 overflow-hidden">
+          <img
+            src={facility.image}
+            alt={facility.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+
+          {/* 🎨 Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition duration-500" />
+
+          {/* 🔥 Floating Icon */}
+          <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-md p-3 rounded-xl text-2xl shadow-md group-hover:scale-110 group-hover:rotate-6 transition duration-500">
+            {facility.icon}
+          </div>
         </div>
+
+        {/* 🧠 CONTENT */}
+        <div className="p-6 flex flex-col gap-3">
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-900 group-hover:text-indigo-600 transition">
+            {facility.title}
+          </h3>
+
+          <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+            {facility.description}
+          </p>
+
+          {/* subtle divider */}
+          <div className="mt-3 h-[2px] w-10 bg-indigo-500 rounded-full group-hover:w-16 transition-all duration-500" />
+        </div>
+
+      </div>
+    </div>
+  ))}
+
+</div>
       </Section>
 
     </main>

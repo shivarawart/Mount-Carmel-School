@@ -120,7 +120,7 @@ const ContactMandatoryPage = () => {
         <div className="max-w-6xl mx-auto px-6 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 animate-on-scroll">
           <iframe
             className="w-full h-[420px] md:h-[520px]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.829122622172!2d76.95743107552092!3d30.324438018625637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f124c395b5b77%3A0xe5aebfd6c20ef3b6!2sMount%20Carmel%20International%20School!5e0!3m2!1sen!2sin!4v1699521434985!5m2!1sen!2sin"
+            src="https://maps.google.com/maps?q=narayangarh%20haryana&t=&z=13&ie=UTF8&iwloc=&output=embed"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

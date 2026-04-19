@@ -2,38 +2,41 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const images = [
-  "https://images.unsplash.com/photo-1588072432836-e10032774350",
-  "https://images.unsplash.com/photo-1596495578065-6e0763fa1178",
-  "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b",
+  "/assets/image31.jpeg",
+  "/assets/image23.jpeg",
+  "/assets/image21.jpeg",
+  "/assets/image6.jpeg",
+  "/assets/image29.jpeg",
+  "/assets/image13.jpeg"
 ];
 
 const Banner = () => {
   const [index, setIndex] = useState(0);
   const textRef = useRef<HTMLDivElement>(null);
 
-  // Auto slider
+  // 🔥 Auto slider
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
-  // Text animation
+  // 🎬 Text animation
   useEffect(() => {
-    const el = textRef.current;
-    if (!el) return;
+    if (!textRef.current) return;
 
     gsap.fromTo(
-      el.children,
-      { y: 40, opacity: 0 },
+      textRef.current.children,
+      { y: 60, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        stagger: 0.2,
+        stagger: 0.15,
         duration: 1,
         ease: "power3.out",
       }
@@ -41,56 +44,78 @@ const Banner = () => {
   }, [index]);
 
   return (
-    <section className="relative w-full h-[75vh] md:h-[90vh] overflow-hidden">
+    <section className="relative w-full h-[80vh] md:h-[95vh] overflow-hidden">
 
-      {/* Background Images */}
+      {/* 🖼 Background */}
       {images.map((img, i) => (
         <div
           key={i}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            i === index ? "opacity-100 z-10" : "opacity-0"
+          className={`absolute inset-0 transition-all duration-[1200ms] ${
+            i === index ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105"
           }`}
         >
           <img
-            src={`${img}?auto=format&fit=crop&w=1600&q=80`}
-            alt="school banner"
+            src={img}
+            alt="school"
             className="w-full h-full object-cover"
           />
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20"></div>
+          {/* 🎨 Premium overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/40 to-transparent" />
         </div>
       ))}
 
-      {/* Content */}
+      {/* 🌌 subtle glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.15),transparent_40%)]" />
+
+      {/* 🧠 Content */}
       <div className="relative z-20 flex items-center h-full">
         <div
           ref={textRef}
-          className="max-w-6xl mx-auto px-6 text-white"
+          className="max-w-7xl mx-auto px-6 text-white"
         >
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-            Empowering Young Minds for a Bright Future
+          {/* Badge */}
+          <div className="mb-4 inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm border border-white/20">
+            🎓 Admissions Open 2026–27
+          </div>
+
+          {/* Heading */}
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight max-w-3xl">
+            Empowering Young Minds
+            <span className="block text-indigo-400">
+              For a Brighter Future
+            </span>
           </h1>
 
-          <p className="mt-4 text-sm md:text-lg text-gray-200 max-w-xl">
-            Mount Carmel International School, Kathemajra, Naraingarh
+          {/* Subtitle */}
+          <p className="mt-5 text-base md:text-lg text-gray-300 max-w-xl">
+            Mount Carmel International School, Kathemajra, Naraingarh —
+            nurturing excellence, values, and future-ready skills.
           </p>
 
-          <div className="mt-6 flex gap-4 flex-wrap">
-            <button className="bg-yellow-400 text-black px-6 py-2 rounded-full font-medium hover:bg-yellow-300 transition">
-              Explore More
-            </button>
+          {/* CTA */}
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button
+              size="lg"
+              className="hover:scale-[1.05] active:scale-[0.97]"
+            >
+              <Link to="/admissions">Apply Now →</Link>
+            </Button>
 
-            <button className="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition">
-              Contact Us
-            </button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="hover:scale-[1.05] "
+            >
+              <Link to="/contact">Visit Campus</Link>
+            </Button>
           </div>
         </div>
       </div>
 
-      {/* Announcement Strip */}
-      <div className="absolute bottom-0 w-full bg-yellow-400 text-black py-2 px-4 flex items-center justify-center text-sm font-medium z-30">
-        🎉 Annual Function 2026 Coming Soon | Admissions Open Now
+      {/* 🔽 Bottom Announcement */}
+      <div className="absolute bottom-0 w-full bg-gradient-to-r from-yellow-400 to-orange-400 text-black py-3 px-4 flex justify-center text-sm md:text-base font-medium z-30 tracking-wide">
+        🎉 Annual Function 2026 Coming Soon • Admissions Open Now
       </div>
     </section>
   );

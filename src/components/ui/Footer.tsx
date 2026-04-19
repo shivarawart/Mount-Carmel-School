@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+// import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const footerRef = useRef<HTMLDivElement>(null);
@@ -50,7 +50,7 @@ const Footer = () => {
           </p>
 
           {/* Social Icons */}
-          <div className="flex gap-4 pt-2">
+          {/* <div className="flex gap-4 pt-2">
             <a
               href="#"
               className="bg-white/10 p-3 rounded-full hover:bg-yellow-400 hover:text-black transition"
@@ -70,7 +70,7 @@ const Footer = () => {
             >
               <FaWhatsapp />
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Contact Info */}
@@ -101,7 +101,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="relative border-t border-white/10 text-center text-sm text-gray-400 py-4 backdrop-blur">
-        © {new Date().getFullYear()} Mount Carmel International School — All Rights Reserved
+        © {new Date().getFullYear()} Mount Carmel International School — All Rights Reserved by shiva
       </div>
     </footer>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { Link } from "react-router-dom";
 import Banner from "../components/ui/Banner";
 import Section from "../components/ui/Section";
 import Card from "../components/ui/Card";
@@ -22,12 +23,12 @@ const HomePage = () => {
           <Card 
             title="Smart Learning"
             description="Interactive classrooms designed for modern education"
-            image="https://tse4.mm.bing.net/th/id/OIP.V1u7jL9xxmhlcCIFdOCskwHaF7?rs=1&pid=ImgDetMain&o=7&rm=3"
+            image="public/img/smartc.png"
           />
           <Card 
             title="Expert Teachers"
             description="Guidance from passionate and qualified educators"
-            image="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+            image="public/assets/image 26.jpeg"
           />
           <Card 
             title="Creative Growth"
@@ -37,41 +38,84 @@ const HomePage = () => {
           <Card 
             title="Safe Environment"
             description="Secure campus with positive atmosphere"
-            image="https://images.unsplash.com/photo-1596495578065-6e0763fa1178"
+            image="public/assets/image21.jpeg"
           />
         </div>
       </Section>
 
       {/* 👩‍🏫 PRINCIPAL MESSAGE (MORE PREMIUM) */}
-      <Section>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <Section className="py-24">
+  <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
 
-          {/* Image */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754"
-              className="w-full h-[320px] md:h-[420px] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-          </div>
+    {/* 🖼 IMAGE SIDE */}
+    <div className="relative group rounded-3xl overflow-hidden shadow-2xl">
 
-          {/* Text */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              A Message from Our Principal
-            </h2>
+      {/* Glow */}
+      <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500" />
 
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Education is not just about books — it is about shaping character,
-              building confidence, and preparing students for real life.
-              At our school, we nurture curiosity, creativity, and compassion.
-            </p>
+      {/* Image */}
+      <img
+        src="public/assets/image5.jpeg"
+        alt="School leadership"
+        className="w-full h-[320px] md:h-[450px] object-cover transition-transform duration-700 group-hover:scale-110"
+      />
 
-            <Button size="lg">Explore Vision</Button>
-          </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        </div>
-      </Section>
+      {/* Floating badge */}
+      <div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl text-sm font-medium shadow-md">
+        Leadership & Vision
+      </div>
+    </div>
+
+    {/* 🧠 TEXT SIDE */}
+    <div className="space-y-6">
+      
+      {/* Heading */}
+      <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
+        Our Approach to Education
+      </h2>
+
+      {/* Description */}
+      <p className="text-gray-600 text-lg leading-relaxed">
+        Education is not just about books — it is about shaping character,
+        building confidence, and preparing students for real life.
+        We focus on nurturing curiosity, creativity, and compassion in every student.
+      </p>
+
+      {/* Highlight points */}
+      <div className="grid grid-cols-2 gap-4 text-sm text-gray-700">
+        <div className="flex items-center gap-2">✔ Value-based learning</div>
+        <div className="flex items-center gap-2">✔ Smart classrooms</div>
+        <div className="flex items-center gap-2">✔ Holistic growth</div>
+        <div className="flex items-center gap-2">✔ Future-ready skills</div>
+      </div>
+
+      {/* CTA */}
+      <div className="flex gap-4 pt-4">
+        
+        <Link to="/academics"><Button
+          size="lg"
+          className="hover:scale-[1.03] active:scale-[0.97]"
+        >
+          Explore Vision →
+        </Button></Link>
+
+
+        <Link to="/contact">
+        <Button
+          variant="outline"
+          size="lg"
+          className="hover:scale-[1.03]"
+        >
+          Contact School
+        </Button></Link>
+      </div>
+    </div>
+
+  </div>
+</Section>
 
       {/* 🚌 FACILITIES (VISUAL HEAVY SECTION) */}
       <Section

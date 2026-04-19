@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Banner from "../../components/ui/Banner";
 import Section from "../../components/ui/Section";
 import Card from "../../components/ui/Card";
-import Button from "../../components/ui/Button";
 import PhilosophySection from "../../components/ui/PhilosophySection";
 
 gsap.registerPlugin(ScrollTrigger);

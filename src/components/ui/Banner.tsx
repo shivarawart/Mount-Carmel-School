@@ -44,80 +44,87 @@ const Banner = () => {
   }, [index]);
 
   return (
-    <section className="relative w-full h-[80vh] md:h-[95vh] overflow-hidden">
+   
+    <section className="relative w-full h-[85vh] md:h-[100vh] overflow-hidden font-sans">
 
-      {/* 🖼 Background */}
-      {images.map((img, i) => (
-        <div
-          key={i}
-          className={`absolute inset-0 transition-all duration-[1200ms] ${
-            i === index ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105"
-          }`}
-        >
-          <img
-            src={img}
-            alt="school"
-            className="w-full h-full object-cover"
-          />
+  {/* 🖼 Background */}
+  {images.map((img, i) => (
+    <div
+      key={i}
+      className={`absolute inset-0 transition-all duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        i === index
+          ? "opacity-100 scale-100 z-10"
+          : "opacity-0 scale-110"
+      }`}
+    >
+      <img
+        src={img}
+        alt="school"
+        className="w-full h-full object-cover"
+      />
 
-          {/* 🎨 Premium overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/40 to-transparent" />
-        </div>
-      ))}
+      {/* 🎨 Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/50 to-black/20" />
+    </div>
+  ))}
 
-      {/* 🌌 subtle glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.15),transparent_40%)]" />
+  {/* 🌌 Glow Effect */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(99,102,241,0.18),transparent_45%)]" />
 
-      {/* 🧠 Content */}
-      <div className="relative z-20 flex items-center h-full">
-        <div
-          ref={textRef}
-          className="max-w-7xl mx-auto px-6 text-white"
-        >
-          {/* Badge */}
-          <div className="mb-4 inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm border border-white/20">
-            🎓 Admissions Open 2026–27
-          </div>
+  {/* 🧠 Content */}
+  <div className="relative z-20 flex items-center h-full">
+    <div
+      ref={textRef}
+      className="max-w-7xl mx-auto px-6 text-white"
+    >
 
-          {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight max-w-3xl">
-            Empowering Young Minds
-            <span className="block text-indigo-400">
-              For a Brighter Future
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="mt-5 text-base md:text-lg text-gray-300 max-w-xl">
-            Mount Carmel International School, Kathemajra, Naraingarh —
-            nurturing excellence, values, and future-ready skills.
-          </p>
-
-          {/* CTA */}
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button
-              size="lg"
-              className="hover:scale-[1.05] active:scale-[0.97]"
-            >
-              <Link to="/admissions">Apply Now →</Link>
-            </Button>
-
-            <Button
-              variant="outline"
-              size="lg"
-              className="hover:scale-[1.05] "
-            >
-              <Link to="/contact">Visit Campus</Link>
-            </Button>
-          </div>
-        </div>
+      {/* Badge */}
+      <div className="mb-5 inline-flex items-center gap-2 bg-white/10 backdrop-blur-xl px-5 py-2 rounded-full text-sm border border-white/20 shadow-lg">
+        🎓 Admissions Open 2026–27
       </div>
 
-      {/* 🔽 Bottom Announcement */}
-      <div className="absolute bottom-0 w-full bg-gradient-to-r from-yellow-400 to-orange-400 text-black py-3 px-4 flex justify-center text-sm md:text-base font-medium z-30 tracking-wide">
-        🎉 Annual Function 2026 Coming Soon • Admissions Open Now
+      {/* Heading */}
+      <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight max-w-3xl">
+        Empowering Young Minds
+        <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+          For a Brighter Future
+        </span>
+      </h1>
+
+      {/* Subtitle */}
+      <p className="mt-6 text-base md:text-lg text-gray-300 max-w-xl leading-relaxed">
+        Mount Carmel International School, Kathemajra, Naraingarh —
+        nurturing excellence, values, and future-ready skills.
+      </p>
+
+      {/* CTA */}
+      <div className="mt-10 flex flex-wrap gap-5">
+
+        <Button
+          size="lg"
+          className="bg-indigo-600 hover:bg-indigo-500 text-white px-7 py-3 rounded-xl shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+        >
+          <Link to="/admissions">Apply Now →</Link>
+        </Button>
+
+        <Button
+          variant="outline"
+          size="lg"
+          className="border-white/30 text-white backdrop-blur-md bg-white/5 px-7 py-3 rounded-xl hover:bg-white/10 transition-all duration-300 hover:scale-105"
+        >
+          <Link to="/contact">Visit Campus</Link>
+        </Button>
+
       </div>
-    </section>
+    </div>
+  </div>
+
+  {/* 🔽 Bottom Announcement */}
+  <div className="absolute bottom-0 w-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-black py-3 px-4 flex justify-center text-sm md:text-base font-semibold z-30 tracking-wide shadow-md">
+    🎉 Annual Function 2026 Coming Soon • Admissions Open Now
+  </div>
+
+</section>
   );
 };
 

@@ -14,45 +14,50 @@ gsap.registerPlugin(ScrollTrigger);
 const disclosures = [
   {
     title: "Affiliation Details",
-    content: "Mount Carmel International School is affiliated with CBSE, New Delhi (Affiliation No: 531833).",
+    content:
+      "Mount Carmel International School is affiliated with CBSE, New Delhi (Affiliation No: 531833).",
   },
   {
     title: "School Management Committee",
-    content: "The School Management Committee comprises experienced educationists, parents, and community leaders committed to governance and academic excellence.",
+    content:
+      "The School Management Committee comprises experienced educationists, parents, and community leaders committed to governance and academic excellence.",
   },
   {
     title: "Staff Details",
-    content: "Our teaching and non-teaching staff are highly qualified, regularly trained, and deeply passionate about nurturing young minds.",
+    content:
+      "Our teaching and non-teaching staff are highly qualified, regularly trained, and deeply passionate about nurturing young minds.",
   },
   {
     title: "Infrastructure & Safety",
-    content: "State-of-the-art classrooms, science & computer labs, spacious playground, CCTV surveillance, and robust safety protocols ensure a secure learning environment.",
+    content:
+      "State-of-the-art classrooms, science & computer labs, spacious playground, CCTV surveillance, and robust safety protocols ensure a secure learning environment.",
   },
 ];
 
 const ContactMandatoryPage = () => {
   const pageRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
   const [activeDisclosure, setActiveDisclosure] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const formRef = useRef<HTMLFormElement>(null);
-
+  // 🔥 Scroll Animations (optimized)
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".animate-on-scroll").forEach((el: any, i) => {
+      gsap.utils.toArray<HTMLElement>(".animate-on-scroll").forEach((el) => {
         gsap.fromTo(
           el,
-          { y: 60, opacity: 0 },
+          { y: 40, opacity: 0 },
           {
             y: 0,
             opacity: 1,
-            duration: 0.9,
-            delay: i * 0.08,
+            duration: 0.8,
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
               start: "top 85%",
+              toggleActions: "play none none none",
             },
           }
         );
@@ -62,7 +67,7 @@ const ContactMandatoryPage = () => {
     return () => ctx.revert();
   }, []);
 
-  // Handle form submission with EmailJS
+  // 📩 Form Submit
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
@@ -71,124 +76,166 @@ const ContactMandatoryPage = () => {
 
     try {
       await emailjs.sendForm(
-        "service_1ru1mkm",   // Service ID
-        "template_ucauo1a",  // Template ID
+        "service_1ru1mkm",
+        "template_ucauo1a",
         formRef.current,
-        "u2FIr6vPNxHFy_Zkc"    // Public Key (from API Keys)
+        "u2FIr6vPNxHFy_Zkc"
       );
 
       setSubmitted(true);
       formRef.current.reset();
-
-      // Auto hide success message after 5 seconds
-      setTimeout(() => setSubmitted(false), 5000);
-    } catch (error) {
-      alert("Failed to send message. Please try again.");
-      console.error(error);
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message. Try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <main ref={pageRef} className="bg-gradient-to-b from-slate-50 to-white text-gray-900 overflow-x-hidden">
+    <main
+      ref={pageRef}
+      className="bg-gradient-to-b from-slate-50 via-white to-white text-gray-900 overflow-x-hidden"
+    >
       {/* 🔥 HERO */}
       <Banner />
 
       {/* 📇 CONTACT INFO */}
-      <Section title="Get in Touch" subtitle="We'd love to hear from you" center className="py-20">
-        <div className="max-w-6xl mx-auto px-6 grid gap-8 md:grid-cols-3 animate-on-scroll">
+      <Section
+        title="Get in Touch"
+        subtitle="We'd love to hear from you"
+        center
+        className="py-14 sm:py-20"
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid gap-6 sm:gap-8 md:grid-cols-3 animate-on-scroll">
           {[
             { icon: "📞", title: "Phone", value: "+91-8307622365" },
             { icon: "✉️", title: "Email", value: "mountcarmel177@gmail.com" },
-            { icon: "📍", title: "Address", value: "Village Kathemajra, Tehsil Naraingarh, District Ambala, Haryana - 134203" },
+            {
+              icon: "📍",
+              title: "Address",
+              value:
+                "Village Kathemajra, Tehsil Naraingarh, District Ambala, Haryana - 134203",
+            },
           ].map((info, idx) => (
             <div
               key={idx}
-              className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center"
+              className="group bg-white/80 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center"
             >
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform">{info.icon}</div>
-              <h3 className="text-2xl font-semibold mb-3 text-gray-900">{info.title}</h3>
-              <p className="text-gray-600 text-lg leading-relaxed">{info.value}</p>
+              <div className="text-4xl sm:text-5xl mb-4 transition-transform group-hover:scale-110">
+                {info.icon}
+              </div>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                {info.title}
+              </h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                {info.value}
+              </p>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* 🗺 GOOGLE MAP */}
-      <Section title="Our Campus Location" subtitle="Visit us at Kathemajra" center className="py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-6 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 animate-on-scroll">
-          <iframe
-            className="w-full h-[420px] md:h-[520px]"
-            src="https://maps.google.com/maps?q=narayangarh%20haryana&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+      {/* 🗺 MAP (FIXED RESPONSIVE) */}
+      <Section
+        title="Our Campus Location"
+        subtitle="Visit us at Kathemajra"
+        center
+        className="py-14 sm:py-20 bg-slate-50"
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 animate-on-scroll">
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-xl border border-gray-200">
+            <div className="relative w-full pt-[70%] md:pt-[50%]">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://maps.google.com/maps?q=narayangarh%20haryana&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </Section>
 
-      {/* 📜 MANDATORY DISCLOSURE */}
-      <Section title="Mandatory Disclosure" subtitle="Transparency & Compliance" center className="py-20">
-        <div className="max-w-4xl mx-auto px-6 space-y-6 animate-on-scroll">
+      {/* 📜 DISCLOSURE */}
+      <Section
+        title="Mandatory Disclosure"
+        subtitle="Transparency & Compliance"
+        center
+        className="py-14 sm:py-20"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-4 animate-on-scroll">
           {disclosures.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl border border-gray-200 shadow-sm"
             >
               <button
-                onClick={() => setActiveDisclosure(activeDisclosure === idx ? null : idx)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors focus:outline-none"
+                onClick={() =>
+                  setActiveDisclosure(
+                    activeDisclosure === idx ? null : idx
+                  )
+                }
+                className="w-full px-6 py-5 flex justify-between items-center hover:bg-slate-50 transition"
               >
-                <span className="text-xl font-semibold text-gray-900 pr-4">{item.title}</span>
-                <span className="text-3xl text-indigo-600 font-light transition-transform duration-300">
+                <span className="text-lg font-semibold">
+                  {item.title}
+                </span>
+                <span className="text-2xl text-indigo-600">
                   {activeDisclosure === idx ? "−" : "+"}
                 </span>
               </button>
+
               <div
-                className={`px-8 pb-8 text-gray-600 leading-relaxed transition-all duration-500 overflow-hidden ${activeDisclosure === idx ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                className={`overflow-hidden transition-all duration-500 ${
+                  activeDisclosure === idx
+                    ? "max-h-[400px] opacity-100 px-6 pb-5"
+                    : "max-h-0 opacity-0"
+                }`}
               >
-                {item.content}
+                <p className="text-gray-600">{item.content}</p>
               </div>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* 📝 CONTACT FORM */}
-      <Section title="Send Us a Message" subtitle="We reply within 24 hours" center className="py-20 bg-slate-50">
-        <div className="max-w-2xl mx-auto px-6 animate-on-scroll">
-          <div className="bg-white rounded-3xl shadow-2xl p-10 md:p-12 border border-gray-100">
+      {/* 📝 FORM */}
+      <Section
+        title="Send Us a Message"
+        subtitle="We reply within 24 hours"
+        center
+        className="py-14 sm:py-20 bg-slate-50"
+      >
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 animate-on-scroll">
+          <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl p-6 sm:p-10 border border-gray-200">
+
             {submitted && (
-              <div className="mb-8 p-4 bg-green-100 border border-green-300 text-green-800 rounded-2xl text-center">
-                ✅ Thank you! Your message has been sent successfully.
+              <div className="mb-6 p-4 bg-green-100 border border-green-300 text-green-800 rounded-xl text-center text-sm">
+                ✅ Message sent successfully!
               </div>
             )}
 
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  name="user_name"
-                  placeholder="Full Name"
-                  required
-                  className="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition placeholder:text-gray-500"
-                />
-                <input
-                  type="email"
-                  name="user_email"
-                  placeholder="Email Address"
-                  required
-                  className="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition placeholder:text-gray-500"
-                />
-                <input
-                  type="tel"
-                  name="user_phone"
-                  placeholder="Contact Number"
-                  required
-                />
-
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  { name: "user_name", type: "text", placeholder: "Full Name" },
+                  { name: "user_email", type: "email", placeholder: "Email Address" },
+                  { name: "user_phone", type: "tel", placeholder: "Contact Number" },
+                ].map((input, i) => (
+                  <input
+                    key={i}
+                    type={input.type}
+                    name={input.name}
+                    placeholder={input.placeholder}
+                    required
+                    className="w-full px-5 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition text-sm"
+                  />
+                ))}
               </div>
 
               <input
@@ -196,30 +243,28 @@ const ContactMandatoryPage = () => {
                 name="subject"
                 placeholder="Subject"
                 required
-                className="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition placeholder:text-gray-500"
+                className="w-full px-5 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition text-sm"
               />
 
               <textarea
                 name="message"
-                placeholder="Your Message / Inquiry"
+                rows={5}
+                placeholder="Your Message"
                 required
-                rows={6}
-                className="w-full px-6 py-4 rounded-3xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition resize-y placeholder:text-gray-500"
+                className="w-full px-5 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition text-sm"
               />
 
               <Button
                 type="submit"
-                variant="primary"
-                size="lg"
                 disabled={isSubmitting}
-                className="w-full py-7 text-lg font-medium rounded-2xl shadow-lg hover:shadow-xl transition-all active:scale-[0.985]"
+                className="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white transition active:scale-95"
               >
-                {isSubmitting ? "Sending Message..." : "Send Message"}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
 
-            <p className="text-center text-xs text-gray-500 mt-8">
-              All fields are required. We respect your privacy.
+            <p className="text-xs text-gray-500 mt-6 text-center">
+              We respect your privacy.
             </p>
           </div>
         </div>

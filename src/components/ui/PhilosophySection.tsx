@@ -3,81 +3,117 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/ui/Button";
 
-
 const PhilosophySection = () => {
   const [expanded, setExpanded] = useState(false);
 
   const shortText = `
-  We believe education is not just about marks, but about shaping character,
-  confidence, and real-world skills.
-  `;
+We believe education is not just about marks, but about shaping character,
+confidence, and real-world skills.
+`;
 
   const fullText = `
-  We believe education is not just about marks, but about shaping character,
-  confidence, and real-world skills.
+We believe education is not just about marks, but about shaping character,
+confidence, and real-world skills.
 
-  At our school, every student is encouraged to explore their potential through
-  academics, creativity, and discipline. We focus on building a strong foundation
-  that prepares students not just for exams, but for life.
+At our school, every student is encouraged to explore their potential through
+academics, creativity, and discipline.
 
-  Our approach combines modern teaching techniques, technology-driven learning,
-  and value-based education to create confident, responsible, and innovative individuals.
+We focus on building a strong foundation that prepares students not just for exams,
+but for life.
 
-  We are committed to nurturing curiosity, leadership, and lifelong learning habits
-  that empower students to succeed in an ever-evolving world.
-  `;
+Our approach combines modern teaching techniques, technology-driven learning,
+and value-based education.
+
+We nurture curiosity, leadership, and lifelong learning habits that empower students
+to succeed in an ever-evolving world.
+`;
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+    <section className="relative py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-indigo-50 via-white to-purple-50 overflow-hidden">
 
-        {/* IMAGE SIDE */}
-        <div className="relative group overflow-hidden rounded-3xl shadow-2xl">
+      {/* 🌌 background glow */}
+      <div className="absolute top-[-100px] right-[-100px] w-[300px] h-[300px] bg-purple-400/20 blur-3xl rounded-full" />
+
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+        {/* 🖼 IMAGE */}
+        <div className="relative group overflow-hidden rounded-2xl shadow-xl">
           <img
-            src="public/assets/image29.jpeg"
+            src="/assets/image29.jpeg"
             alt="Students learning"
-            className="w-full h-[380px] md:h-[520px] object-cover transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover transition-transform duration-700 group-hover:scale-110"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-          {/* glow effect */}
+          {/* glow */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/20 blur-3xl rounded-full group-hover:scale-150 transition duration-700" />
         </div>
 
-        {/* TEXT SIDE */}
+        {/* 🧠 TEXT */}
         <div className="space-y-6">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-            Our Educational Philosophy
-          </h2>
 
-          <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">
-            {expanded ? fullText : shortText}
-          </p>
+          {/* heading */}
+          <div>
+            <p className="text-indigo-600 font-medium text-sm mb-2 tracking-wide">
+              OUR APPROACH
+            </p>
 
-          {/* CTA */}
-          <div className="flex flex-wrap gap-4">
-            <Button
-              size="lg"
-              variant="primary"
-              onClick={() => setExpanded(!expanded)}
-            >
-              {expanded ? "Show Less" : "Read More"}
-            </Button>
-
-            <Link to="/academics">
-            <Button variant="outline" size="lg">
-              Explore Academics
-            </Button>
-            </Link>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+              Our Educational Philosophy
+            </h2>
           </div>
 
-          {/* highlight points */}
-          <div className="pt-4 grid grid-cols-2 gap-4 text-sm text-gray-700">
-            <div className="flex items-center gap-2">✔ Value-based learning</div>
-            <div className="flex items-center gap-2">✔ Smart classrooms</div>
-            <div className="flex items-center gap-2">✔ Holistic growth</div>
-            <div className="flex items-center gap-2">✔ Future-ready skills</div>
+          {/* text */}
+          <div
+            className={`text-gray-600 leading-relaxed whitespace-pre-line transition-all duration-500 ${
+              expanded ? "max-h-[500px]" : "max-h-[120px]"
+            } overflow-hidden`}
+          >
+            {expanded ? fullText : shortText}
+          </div>
+
+          {/* fade effect when collapsed */}
+          {!expanded && (
+            <div className="h-10 -mt-10 bg-gradient-to-t from-white via-white/80 to-transparent" />
+          )}
+
+          {/* CTA */}
+          <div className="flex flex-wrap gap-4 pt-2">
+
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium shadow-md hover:bg-indigo-500 hover:scale-105 transition-all duration-300 active:scale-95"
+            >
+              {expanded ? "Show Less" : "Read More"}
+            </button>
+
+            <Link to="/academics">
+              <button className="px-6 py-3 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
+                Explore Academics →
+              </button>
+            </Link>
+
+          </div>
+
+          {/* 🔥 highlights */}
+          <div className="pt-6 grid grid-cols-2 gap-3 text-sm">
+
+            {[
+              "Value-based learning",
+              "Smart classrooms",
+              "Holistic growth",
+              "Future-ready skills",
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/70 backdrop-blur-md border border-gray-200 shadow-sm"
+              >
+                <span className="text-indigo-600 font-bold">✓</span>
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
+
           </div>
         </div>
       </div>

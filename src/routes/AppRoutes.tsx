@@ -11,6 +11,8 @@ const Admissions = lazy(() => import("../pages/admissions/page"));
 const Facilities = lazy(() => import("../pages/facilities/page"));
 const Gallery = lazy(() => import("../pages/Gallery/page"));
 const Contact = lazy(() => import("../pages/contact/page"));
+const Mandatory = lazy(() => import("../pages/mandatory-disclosure/page") )
+
 
 // Loader
 const Loader = () => (
@@ -30,7 +32,9 @@ export default function AppRoutes() {
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+         <Route path="/mandatory" element={<Mandatory />} />
         <Route path="*" element={<Navigate to="/" />} />
+
       </Routes>
     </Suspense>
   );

@@ -95,7 +95,32 @@ const data: FolderType[] = [
         name: "School PDF 4",
         type: "pdf",
         fileId: "1JgAQE-ZN8PlzBciZ3Hx66zaF1uBkiCRE",
+      }, {
+        name: "Academics",
+        type: "pdf",
+        fileId: "1AlrAsNqGPWZ6g6YEqm70FDR9Rz3RVKKG",
       },
+      {
+        name: "CBSE Documents",
+        type: "pdf",
+        fileId: "19JHLtJRxPUomhwKLnw8z3n5-vQN0TE4u",
+      },
+       {
+        name: "General Information",
+        type: "pdf",
+        fileId: "1RQSGi6t5PBl5G--0-YosDp93lsLgIN2P",
+      },
+       {
+        name: "XII Board Result",
+        type: "pdf",
+        fileId: "1amx3e2g-yd9KhRl2p7TcZKsq9CdoIqkY",
+      },
+       {
+        name: "Result of Board Examanation",
+        type: "pdf",
+        fileId: "1LYkJuuUPuEWc0MNg5WAPiAojyr9VIXqN",
+      },
+      
     ],
   },
 ];

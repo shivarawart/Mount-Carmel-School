@@ -32,110 +32,153 @@ type FolderType = {
 // --- Data ---
 const data: FolderType[] = [
   {
-    name: "General",
+    name: "General Information",
     files: [
       {
-        name: "Staff Details",
+        name: "Affiliation Certificate",
         type: "pdf",
-        fileId: "1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-",
-      },{
-        name:"Affidavit",
-        type:"pdf",
-        fileId:"1pPjpT-3__Pb-RTrxJqfHz0kKzBPgMglF"
-      },{
-         name:"Fees Structure",
-        type:"pdf",
-        fileId:"1wwbFoUY8CRui-2YidWyQwFXHErytvHG-"
-      },{
-          name:"School Planner",
-        type:"pdf",
-        fileId:"13FHH-M2zRvBkfzYx2FPANWg9XE3ol81c"
-      },{
-         name:"Socity Trust certification",
-        type:"pdf",
-        fileId:"1Rw3GcHKL5FcDPe-FnlVKvGCIenfLGKdb"
-      }
+        fileId: "1Ui3EtER3BIB9TUHkuB6AYJNQJi0AB79A",
+      },
+
+      {
+        name: "Society Trust Certification",
+        type: "pdf",
+        fileId: "1Rw3GcHKL5FcDPe-FnlVKvGCIenfLGKdb",
+      },
+      {
+        name:"Recoganation Certificate",
+        type:'pdf',
+        fileId:"1sPpirauBCig0OUxx33IRcuNnxySs9FhX"
+      },
+      {
+        name: "Affidavit",
+        type: "pdf",
+        fileId: "1pPjpT-3__Pb-RTrxJqfHz0kKzBPgMglF",
+      },
+      
+      {
+        name: "NOC",
+        type: "pdf",
+        fileId: "1s5mhHGy1N8rTLLOEoXNEFfO4QjLEJGIo",
+      },
     ],
   },
 
   {
-    name: "Academic",
+    name: "Academic Records",
     files: [
+      {
+        name:"X Result",
+        type:"pdf",
+        fileId:"1AztQwtOeJktchwdpt0CIRqJcW_CfP7h0"
+      },
+       {
+        name: "Board Examination Result",
+        type: "pdf",
+        fileId: "1ZqpbEdq6sNyTOtMt92pwwukbsmUIEOfL",
+      },
       {
         name: "XII Class Result",
         type: "pdf",
         fileId: "11G39bNgW9zCMFgdUhj6YJow9H8_3i5pQ",
       },
       {
-        name: "Result of Board Examination",
-        type: "pdf",
-        fileId: "1ZqpbEdq6sNyTOtMt92pwwukbsmUIEOfL",
-      },
-      
-        ],
+        name:"XII Acadimic Result",
+        type:"pdf",
+        fileId:"1oZ9sCM-T95cSiyue4geuFsGjSNlpSea0"
       },
       {
-    name: "Documents",
+         name: "School Planner",
+        type: "pdf",
+        fileId: "13FHH-M2zRvBkfzYx2FPANWg9XE3ol81c",
+      },{
+        name:"List of PTA Executive committe",
+        type:'pdf',
+        fileId:"1DiSN137a9jC1V9G7k8l5cqllCgLUvJBL"
+      }
+    ],
+  },
+
+  {
+    name: "Staff & Administration",
     files: [
       {
-        name: "Fire Safety certificate",
+        name: "Staff Details",
         type: "pdf",
-        fileId: "18BUI-YutYDi3cThOzD80T2_45AXf1n2s",
+        fileId: "1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-",
       },
       {
-         name: "building certificate",
+        name: "PGT Staff",
+        type: "pdf",
+        fileId: "1WoYOUlMXXrAN_SBCi9vS8xqQ18IRtSUT",
+      },
+      {
+        name: "TGT Staff",
+        type: "pdf",
+        fileId: "1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-",
+      },
+      {
+        name: "PRT Staff",
+        type: "pdf",
+        fileId: "1LMvbfr9lW6yMfPwhCeeceDOt-E6aw54d",
+      },
+      {
+        name: "NTT Staff",
+        type: "pdf",
+        fileId: "1XgpeQncTBqveKNMxrk2VOECN1UQJtTOl",
+      },
+      {
+        name:"Other Staff",
+        type:"pdf",
+        fileId:"10MTECYIoBcaXzi5rytnMcSvfnLVbo-Mw"
+      },{
+         name: "Management Committee",
+      type: "pdf",
+      fileId: "12cXhnMiFfFz8QsOjyMSqLAzfr0uiqPgh",
+      }
+    ],
+  },
+
+  {
+    name: "Finance & Infrastructure",
+    files: [
+       {
+        name: "Building Safety Certificate",
         type: "pdf",
         fileId: "1UYG1Bczzdfe7jnlpybkGizihR62heLdy",
       },
       {
-        name: "Hygienic certificate",
+        name: "Fees Structure",
+        type: "pdf",
+        fileId: "1wwbFoUY8CRui-2YidWyQwFXHErytvHG-",
+      },
+      {
+        name: "School Report Form 6",
+        type: "pdf",
+        fileId: "1XXjIk5UZgOEliPnKWXE8o2qPSzR3qWAF",
+      },
+        {
+        name: "Hygienic Certificate",
         type: "pdf",
         fileId: "10n0iRDEU56tN72I7ylt_mreZGEMfTyhW",
-      },
-      {
-        name: "NOC",
+      },{
+        name: " School Infrastructure Details",
         type: "pdf",
-        fileId: "1s5mhHGy1N8rTLLOEoXNEFfO4QjLEJGIo",
-      },{
-         name: "Infrastructure Details",
-        type: "pdf",
-        fileId: "15tzHxqC9BOcxtiVnskKEPQO1z3VOE7MD"
-      },{
-         name: "Affiliation Certificate",
-        type: "pdf",
-        fileId: "15tzHxqC9BOcxtiVnskKEPQO1z3VOE7MD"
+        fileId: "15tzHxqC9BOcxtiVnskKEPQO1z3VOE7MD",
       },
-      {
-        name: "school Report Form 6",
-         type: "pdf",
-        fileId: "1XXjIk5UZgOEliPnKWXE8o2qPSzR3qWAF"
-      },
-      {
-         name: "PTA Executive Committeee",
-         type: "pdf",
-        fileId: "1DiSN137a9jC1V9G7k8l5cqllCgLUvJBL"
-      },{
-         name: "Management Committee",
-         type: "pdf",
-        fileId: "12cXhnMiFfFz8QsOjyMSqLAzfr0uiqPgh"
-      },{
-         name: "PGT",
-         type: "pdf",
-        fileId: "1WoYOUlMXXrAN_SBCi9vS8xqQ18IRtSUT"
-      },
-      {
-        name:"TGT",
-        type:"pdf",
-        fileId:"1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-"
-      },{
-        name:"PRT",
-        type:"pdf",
-        fileId:"1LMvbfr9lW6yMfPwhCeeceDOt-E6aw54d"
-      }
-     
     ],
   },
-  
+
+  {
+    name: "Safety & Compliance",
+    files: [
+      {
+        name: "Fire Safety Certificate",
+        type: "pdf",
+        fileId: "18BUI-YutYDi3cThOzD80T2_45AXf1n2s",
+      },   
+    ],
+  },
 ];
 
 
@@ -291,7 +334,7 @@ export default function MandatoryDisclosurePage({
                 <p className="text-gray-600 leading-relaxed text-base md:text-lg max-w-3xl">
   We believe in complete transparency. All important documents including 
   affiliation, staff details, academic performance, and infrastructure 
-  records are available for public access{"https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"}
+  records are available for public access{""}
 
   <a
     href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"

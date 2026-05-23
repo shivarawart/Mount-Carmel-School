@@ -13,7 +13,7 @@ const navLinks = [
   { name: "Facilities", path: "/facilities" },
   { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
-  {name: "mandatory & Disclosure" , path:  "/mandatory"},
+  {name: "Mandatory Disclosure" , path:  "/mandatory"},
 ];
 
 export default function Header() {

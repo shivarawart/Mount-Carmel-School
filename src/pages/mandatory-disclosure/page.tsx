@@ -35,10 +35,26 @@ const data: FolderType[] = [
     name: "General",
     files: [
       {
-        name: "Affiliation Certificate",
+        name: "Staff Details",
         type: "pdf",
-        fileId: "12aQ92ZcGpY6UuWxFzZxtFtkUP7WoKy6e",
-      },
+        fileId: "1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-",
+      },{
+        name:"Affidavit",
+        type:"pdf",
+        fileId:"1pPjpT-3__Pb-RTrxJqfHz0kKzBPgMglF"
+      },{
+         name:"Fees Structure",
+        type:"pdf",
+        fileId:"1wwbFoUY8CRui-2YidWyQwFXHErytvHG-"
+      },{
+          name:"School Planner",
+        type:"pdf",
+        fileId:"13FHH-M2zRvBkfzYx2FPANWg9XE3ol81c"
+      },{
+         name:"Socity Trust certification",
+        type:"pdf",
+        fileId:"1Rw3GcHKL5FcDPe-FnlVKvGCIenfLGKdb"
+      }
     ],
   },
 
@@ -46,83 +62,80 @@ const data: FolderType[] = [
     name: "Academic",
     files: [
       {
-        name: "Board Result",
-        type: "excel",
-        fileId: "11TdFUktQ8G9XPyQiXRFpxrHfV6wQ0pgc",
+        name: "XII Class Result",
+        type: "pdf",
+        fileId: "11G39bNgW9zCMFgdUhj6YJow9H8_3i5pQ",
       },
       {
-        name: "Board Result 2",
-        type: "excel",
-        fileId: "1GILkdIqv0OaRC1GiYJIUnf8eEAe-ai7c",
+        name: "Result of Board Examination",
+        type: "pdf",
+        fileId: "1ZqpbEdq6sNyTOtMt92pwwukbsmUIEOfL",
+      },
+      
+        ],
       },
       {
-        name: "Staff Details",
-        type: "excel",
-        fileId: "19BC9Qo08LMm9v02cixARoe5jj0iHblHT",
-      },
-      {
-        name: "Facilities Report",
-        type: "excel",
-        fileId: "1cERVfyT2T4jZLP0i9F8FN9QUh0a5tWx7",
-      },
-      {
-        name: "Academic Planner",
-        type: "doc",
-        fileId: "1GLBmt-AhlmTQnSoICKbKc-rEupEDrQOT",
-      },
-    ],
-  },
-
-  {
     name: "Documents",
     files: [
       {
-        name: "School PDF 1",
+        name: "Fire Safety certificate",
         type: "pdf",
-        fileId: "1SOf37hW_vJ9mTWQOkZFOmQ2YLTlYhdsp",
+        fileId: "18BUI-YutYDi3cThOzD80T2_45AXf1n2s",
       },
       {
-        name: "School PDF 2",
+         name: "building certificate",
         type: "pdf",
-        fileId: "1kN4G21ylXh9qN2s2Yvrv24JlfDYSlDnU",
+        fileId: "1UYG1Bczzdfe7jnlpybkGizihR62heLdy",
       },
       {
-        name: "School PDF 3",
+        name: "Hygienic certificate",
         type: "pdf",
-        fileId: "1SDJ49xebPoIczOLmFV2TDgTSfpReLlSw",
+        fileId: "10n0iRDEU56tN72I7ylt_mreZGEMfTyhW",
       },
       {
-        name: "School PDF 4",
+        name: "NOC",
         type: "pdf",
-        fileId: "1JgAQE-ZN8PlzBciZ3Hx66zaF1uBkiCRE",
-      }, {
-        name: "Academics",
+        fileId: "1s5mhHGy1N8rTLLOEoXNEFfO4QjLEJGIo",
+      },{
+         name: "Infrastructure Details",
         type: "pdf",
-        fileId: "1AlrAsNqGPWZ6g6YEqm70FDR9Rz3RVKKG",
+        fileId: "15tzHxqC9BOcxtiVnskKEPQO1z3VOE7MD"
+      },{
+         name: "Affiliation Certificate",
+        type: "pdf",
+        fileId: "15tzHxqC9BOcxtiVnskKEPQO1z3VOE7MD"
       },
       {
-        name: "CBSE Documents",
-        type: "pdf",
-        fileId: "19JHLtJRxPUomhwKLnw8z3n5-vQN0TE4u",
+        name: "school Report Form 6",
+         type: "pdf",
+        fileId: "1XXjIk5UZgOEliPnKWXE8o2qPSzR3qWAF"
       },
-       {
-        name: "General Information",
-        type: "pdf",
-        fileId: "1RQSGi6t5PBl5G--0-YosDp93lsLgIN2P",
+      {
+         name: "PTA Executive Committeee",
+         type: "pdf",
+        fileId: "1DiSN137a9jC1V9G7k8l5cqllCgLUvJBL"
+      },{
+         name: "Management Committee",
+         type: "pdf",
+        fileId: "12cXhnMiFfFz8QsOjyMSqLAzfr0uiqPgh"
+      },{
+         name: "PGT",
+         type: "pdf",
+        fileId: "1WoYOUlMXXrAN_SBCi9vS8xqQ18IRtSUT"
       },
-       {
-        name: "XII Board Result",
-        type: "pdf",
-        fileId: "1amx3e2g-yd9KhRl2p7TcZKsq9CdoIqkY",
-      },
-       {
-        name: "Result of Board Examanation",
-        type: "pdf",
-        fileId: "1LYkJuuUPuEWc0MNg5WAPiAojyr9VIXqN",
-      },
-      
+      {
+        name:"TGT",
+        type:"pdf",
+        fileId:"1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-"
+      },{
+        name:"PRT",
+        type:"pdf",
+        fileId:"1LMvbfr9lW6yMfPwhCeeceDOt-E6aw54d"
+      }
+     
     ],
   },
+  
 ];
 
 
@@ -268,18 +281,37 @@ export default function MandatoryDisclosurePage({
         subtitle="Access official documents, certificates, and academic records"
         center
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6 mt-10 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 mt-10 space-y-16">
 
           {/* 🌟 INTRO */}
           <div className="text-center max-w-3xl mx-auto reveal">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Transparency & Excellence
             </h2>
-            <p className="text-gray-600 leading-relaxed">
-              We believe in complete transparency. All important documents including 
-              affiliation, staff details, academic performance, and infrastructure 
-              records are available for public access.
-            </p>
+                <p className="text-gray-600 leading-relaxed text-base md:text-lg max-w-3xl">
+  We believe in complete transparency. All important documents including 
+  affiliation, staff details, academic performance, and infrastructure 
+  records are available for public access{"https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"}
+
+  <a
+    href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
+    className="inline-flex items-center gap-1.5 text-gray-900 font-medium group transition-all duration-300"
+  >
+    <span className="relative">
+      inspection video
+      <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
+    </span>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 -960 960 960"
+      fill="currentColor"
+      className="w-[15px] h-[15px] opacity-70 transition-transform duration-300 group-hover:scale-110"
+    >
+      <path d="M320-200v-560l440 280-440 280Z" />
+    </svg>
+  </a>
+</p>
           </div>
 
           {/* 📊 STATS */}

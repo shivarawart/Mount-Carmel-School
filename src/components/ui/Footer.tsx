@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-// import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const footerRef = useRef<HTMLDivElement>(null);
@@ -50,27 +50,27 @@ const Footer = () => {
           </p>
 
           {/* Social Icons */}
-          {/* <div className="flex gap-4 pt-2">
+          <div className="flex gap-4 pt-2">
             <a
-              href="#"
+              href="https://www.facebook.com/share/1D84qpudhg/"
               className="bg-white/10 p-3 rounded-full hover:bg-yellow-400 hover:text-black transition"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/mountcarmelinternational?igsh=emlqc3F1cTk4bmMy"
               className="bg-white/10 p-3 rounded-full hover:bg-yellow-400 hover:text-black transition"
             >
               <FaInstagram />
             </a>
-            <a
+            {/* <a
               href="https://wa.me/918307622365"
               target="_blank"
               className="bg-white/10 p-3 rounded-full hover:bg-green-400 hover:text-black transition"
             >
               <FaWhatsapp />
-            </a>
-          </div> */}
+            </a> */}
+          </div> 
         </div>
 
         {/* Contact Info */}

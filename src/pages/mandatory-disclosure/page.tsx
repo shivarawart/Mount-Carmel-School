@@ -61,6 +61,11 @@ const data: FolderType[] = [
         type: "pdf",
         fileId: "1s5mhHGy1N8rTLLOEoXNEFfO4QjLEJGIo",
       },
+      {
+        name:"Land Certificate",
+        type:"pdf",
+        fileId:"1jHUItZ3DOpWYwJuPoX2Gz9EetZU9xMoc"
+      }
     ],
   },
 

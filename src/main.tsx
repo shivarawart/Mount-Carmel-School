@@ -7,13 +7,28 @@ import Header from './components/ui/Header.tsx'
 import Footer from './components/ui/Footer.tsx'
 import WhatsAppFloat from './components/ui/WhatsAppFloat.tsx'
 
-createRoot(document.getElementById('root')!).render(
+
+
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Header />
-      <App />
+      <main className="pt-[60px] min-h-screen">
+        <App />
+      </main>
       <Footer />
       <WhatsAppFloat />
     </BrowserRouter>
   </StrictMode>,
-)
+);
+// createRoot(document.getElementById('root')!).render(
+//   <StrictMode>
+//     <BrowserRouter>
+//       <Header />
+//       <App />
+//       <Footer />
+//       <WhatsAppFloat />
+//     </BrowserRouter>
+//   </StrictMode>,
+// )

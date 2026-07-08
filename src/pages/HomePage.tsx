@@ -113,25 +113,25 @@ const highlights = [
   "Future-ready skills",
 ];
 
-const facilities = [
-  {
-    title: "Modern Labs",
-    description: "Hands-on science and computer labs built for discovery.",
-    image:
-      "https://tse2.mm.bing.net/th/id/OIP.Dz01Coc7gdwEeSJuoMI8CAHaDt?rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    title: "Library Space",
-    description: "Peaceful reading and digital learning zone.",
-    image: "/img/liabrary.png",
-  },
-  {
-    title: "Sports Arena",
-    description: "Encouraging fitness, teamwork, and discipline.",
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
-  },
-];
+// const facilities = [
+//   {
+//     title: "Modern Labs",
+//     description: "Hands-on science and computer labs built for discovery.",
+//     image:
+//       "https://tse2.mm.bing.net/th/id/OIP.Dz01Coc7gdwEeSJuoMI8CAHaDt?rs=1&pid=ImgDetMain&o=7&rm=3",
+//   },
+//   {
+//     title: "Library Space",
+//     description: "Peaceful reading and digital learning zone.",
+//     image: "/img/liabrary.png",
+//   },
+//   {
+//     title: "Sports Arena",
+//     description: "Encouraging fitness, teamwork, and discipline.",
+//     image:
+//       "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
+//   },
+// ];
 
 const news = [
   {

@@ -27,21 +27,20 @@ gsap.registerPlugin(ScrollTrigger);
 /* -------------------------------------------------------------------------- */
 
 const staffDocuments = [
+  // {
+  //   title: "Staff Details Report",
+  //   description:
+  //     "Official faculty information including qualifications, experience, and department details.",
+  //   fileId: "1Y1cZkWZHRATUoh3Md3SxycKXJoMapWew",
+  //   category: "Faculty",
+  // },
   {
     title: "Staff Details Report",
     description:
       "Official faculty information including qualifications, experience, and department details.",
-    fileId: "1Y1cZkWZHRATUoh3Md3SxycKXJoMapWew",
+    fileId: "1txLpBkDu9NuXlEm3VGqfLKGMi9KZKSPw",
     category: "Faculty",
   },
-  {
-    title: "Academic Planner",
-    description:
-      "Yearly academic planning, curriculum structure, and educational roadmap.",
-    fileId: "1txLpBkDu9NuXlEm3VGqfLKGMi9KZKSPw",
-    category: "Academics",
-  },
- 
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -308,7 +307,26 @@ const AboutPage = () => {
             <div className="reveal">
               <Card
                 title="Our Vision"
-                description="To nurture responsible global citizens equipped with creativity, integrity, leadership, and lifelong learning abilities."
+                description="Principal's Message
+
+Welcome to Mount Carmel International School!
+
+It is with great pride and immense pleasure that I welcome you to the Mount Carmel International School family. Our school is committed to nurturing young minds in a safe, inclusive, and inspiring environment where every child is encouraged to discover their potential and strive for excellence.
+
+At Mount Carmel International School, we believe that education goes beyond textbooks. We aim to develop confident, compassionate, responsible, and lifelong learners who are equipped with the knowledge, skills, and values needed to succeed in an ever-changing world. Through a balanced curriculum, innovative teaching practices, and a wide range of co-curricular activities, we ensure the holistic development of every student.
+
+Our dedicated team of educators works tirelessly to create meaningful learning experiences that inspire curiosity, creativity, critical thinking, and collaboration. We encourage our students to embrace challenges, respect diversity, uphold strong moral values, and contribute positively to society.
+
+We firmly believe that the partnership between parents, teachers, and the school plays a vital role in shaping the future of our children. Together, we can empower our students to become confident global citizens and compassionate leaders of tomorrow.
+
+As you explore our website, I invite you to learn more about our vibrant school community and the opportunities we provide for every child to learn, grow, and excel.
+
+Thank you for placing your trust in Mount Carmel International School. We look forward to working together to build a bright and successful future for every student.
+
+With warm regards,
+
+Principal
+Mount Carmel International School"
                 image="/assets/image7.jpeg"
               />
             </div>
@@ -316,7 +334,28 @@ const AboutPage = () => {
             <div className="reveal">
               <Card
                 title="Our Mission"
-                description="To create a safe and inspiring environment that promotes innovation, discipline, collaboration, and academic brilliance."
+                description="Mr.Jagdev's Message
+
+Dear Parents, Students, and Well-Wishers,
+
+It is my privilege to welcome you to Mount Carmel International School, an institution dedicated to providing quality education rooted in faith, values, and academic excellence.
+
+We believe that education is not merely the pursuit of knowledge but the foundation for building character, nurturing compassion, and empowering young minds to become responsible citizens and future leaders. Inspired by the timeless values of love, integrity, service, and respect, our mission is to create a learning environment where every child is encouraged to discover their unique potential and develop into a confident, caring, and capable individual.
+
+In today's rapidly evolving world, education must equip learners with not only academic proficiency but also critical thinking, creativity, adaptability, and strong moral values. Guided by the vision of the CBSE curriculum and enriched through experiential learning, innovation, and holistic development, we strive to prepare our students for the challenges and opportunities of the twenty-first century.
+
+At Mount Carmel International School, our dedicated faculty, supportive parents, and motivated students work together as one family to create a culture of excellence. We encourage every learner to dream with confidence, work with dedication, lead with humility, and serve society with compassion.
+
+As an institution, we remain committed to providing a safe, inclusive, and inspiring environment where every child is valued, respected, and empowered to achieve their highest aspirations. Our aim is not only to shape successful professionals but also individuals who uphold ethical values, contribute positively to society, and make a meaningful difference in the world.
+
+I extend my heartfelt gratitude to our parents for their continued trust and partnership. Together, let us nurture a generation that is intellectually enlightened,h morally upright, spiritually grounded, and socially responsible.
+
+May Almighty God continue to bless our students, staff, parents, and the entire Mount Carmel family as we move forward with faith, wisdom, and excellence.
+
+With warm regards,
+
+Mr.Jagdev
+Mount Carmel International School"
                 image="https://images.unsplash.com/photo-1498079022511-d15614cb1c02"
               />
             </div>
@@ -357,10 +396,7 @@ const AboutPage = () => {
               const Icon = item.icon;
 
               return (
-                <div
-                  key={i}
-                  className="reveal achievement-card group"
-                >
+                <div key={i} className="reveal achievement-card group">
                   <div className="relative overflow-hidden rounded-[2rem] border border-white/30 bg-white/70 backdrop-blur-2xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 h-full flex flex-col">
                     {/* IMAGE */}
                     <div className="relative overflow-hidden">
@@ -448,7 +484,7 @@ const AboutPage = () => {
                         },
                         {
                           label: "Years Excellence",
-                          value: "15+",
+                          value: "8+",
                         },
                       ].map((item, i) => (
                         <div
@@ -476,9 +512,7 @@ const AboutPage = () => {
                 <StaffDocumentCard
                   key={i}
                   item={item}
-                  onPreview={(fileId, title) =>
-                    setActivePdf({ fileId, title })
-                  }
+                  onPreview={(fileId, title) => setActivePdf({ fileId, title })}
                 />
               ))}
             </div>

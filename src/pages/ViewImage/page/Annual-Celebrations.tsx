@@ -37,6 +37,12 @@ const galleryImages: GalleryImage[] = [
   { src: "/views/AnnualCelebration/img17.jpg", alt: "Annual Celebration 17" },
   { src: "/views/AnnualCelebration/img18.jpg", alt: "Annual Celebration 18" },
   { src: "/views/AnnualCelebration/img19.jpg", alt: "Annual Celebration 19" },
+  { src: "/views/Annual-function/img1.jpg", alt: "Annual Function 1" },
+  { src: "/views/Annual-function/img2.jpg", alt: "Annual Function 2" },
+  { src: "/views/Annual-function/img3.jpg", alt: "Annual Function 3" },
+  { src: "/views/Annual-function/img4.jpg", alt: "Annual Function 4" },
+  { src: "/views/Annual-function/img5.jpg", alt: "Annual Function 5" },
+  { src: "/views/Annual-function/img6.jpg", alt: "Annual Function 6" },
 ];
 
 export default function AnnualCelebrations () {

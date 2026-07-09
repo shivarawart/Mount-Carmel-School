@@ -13,9 +13,7 @@ const Gallery = lazy(() => import("../pages/Gallery/page"));
 const Contact = lazy(() => import("../pages/contact/page"));
 const Mandatory = lazy(() => import("../pages/mandatory-disclosure/page") )
 const LibraryPage = lazy(() => import ('../pages/ViewImage/page/Libraryimg'))
-const AnnualFunction = lazy(() => import('../pages/ViewImage/page/AnnualFunction'))
 const AnnualCelebrations = lazy(() => import('../pages/ViewImage/page/Annual-Celebrations'))
-const CreativeMinds = lazy(() => import('../pages/ViewImage/page/Creative-Minds'))
 const ExpertTeachers = lazy(() => import('../pages/ViewImage/page/ExpertTeachers'))
 const CreativeGrowth = lazy(() => import('../pages/ViewImage/page/CreativeGrowth'))
 const SafeEnvironment = lazy(() => import('../pages/ViewImage/page/SafeEnvironment'))
@@ -41,9 +39,7 @@ export default function AppRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/mandatory" element={<Mandatory />} />
         <Route path="/Library" element={<LibraryPage />} />
-        <Route path='/AnnualFunction' element={<AnnualFunction />} />
-        <Route path='/AnnualCelebrations' element={<AnnualCelebrations />} />
-        <Route path='/CreativeMinds' element={<CreativeMinds />} />
+        <Route path='/Annual-Day' element={<AnnualCelebrations />} />
         <Route path='/ExpertTeachers' element={<ExpertTeachers />} />
         <Route path='/CreativeGrowth' element={ <CreativeGrowth />} />
         <Route path='/SafeEnvironment' element={ <SafeEnvironment />} />

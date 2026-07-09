@@ -365,10 +365,10 @@ export default function MandatoryDisclosurePage({
           {/* 📊 STATS */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { label: "Students", value: "1200+" },
-              { label: "Qualified Staff", value: "80+" },
+              { label: "Students", value: "900+" },
+              { label: "Qualified Staff", value: "40+" },
               { label: "Board Results", value: "100%" },
-              { label: "Years of Excellence", value: "15+" },
+              { label: "Years of Excellence", value: "8+" },
             ].map((item, i) => (
               <div
                 key={i}

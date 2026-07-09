@@ -22,6 +22,12 @@ const documents = [
   "Birth Certificate",
   "Previous Class Report Card",
   "Passport Size Photographs",
+  "PAN CARD",
+  "SLC of previous school",
+  "Child & Parents Adhar card",
+  "Family id",
+
+
 ];
 
 const notes = [

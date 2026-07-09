@@ -2,7 +2,17 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ArrowRight,
+  ShieldCheck,
+  Sparkles,
+  BookOpen,
+  Trophy,
+  FlaskConical,
+  Users,
+} from "lucide-react";
 import Banner from "../components/ui/Banner";
 import Section from "../components/ui/Section";
 import Card from "../components/ui/Card";
@@ -22,7 +32,7 @@ const featureItems: FeatureItem[] = [
     title: "Library Spaces",
     description:
       "Discover a vibrant learning environment where books, digital resources, and collaborative reading spaces inspire curiosity, independent thinking, and a lifelong passion for knowledge.",
-    image: "public/views/library-Sapace/img7.jpg",
+    image: "/views/library-Sapace/img7.jpg",
     badge: "Knowledge Hub",
     accent: "from-cyan-500 via-sky-500 to-blue-600",
     href: "/Library",
@@ -31,8 +41,7 @@ const featureItems: FeatureItem[] = [
     title: "Sports Arena",
     description:
       "Modern indoor and outdoor sports facilities empower students to build confidence, teamwork, resilience, and leadership while promoting physical fitness and healthy competition.",
-    image:
-      "public/views/Sports-Areana/img6.jpg",
+    image: "/views/Sports-Areana/img6.jpg",
     badge: "Sports Excellence",
     accent: "from-orange-500 via-red-500 to-rose-600",
     href: "/SportsArena",
@@ -41,35 +50,16 @@ const featureItems: FeatureItem[] = [
     title: "Creative Growth",
     description:
       "Hands-on experiences in arts, music, design, and innovation encourage students to explore their talents, think creatively, and transform ideas into meaningful achievements.",
-    image:
-      "public/views/Creative-growth/img10.jpg",
+    image: "/views/Creative-growth/img10.jpg",
     badge: "Creative Learning",
     accent: "from-fuchsia-500 via-pink-500 to-purple-600",
     href: "/CreativeGrowth",
   },
   {
-    title: "Annual Function",
-    description:
-      "A grand celebration of talent, culture, and achievement where students showcase confidence, creativity, and leadership through inspiring performances and unforgettable moments.",
-    image: "public/views/Annual-function/img4.jpg",
-    badge: "Signature Event",
-    accent: "from-amber-500 via-orange-500 to-red-500",
-    href: "/AnnualFunction",
-  },
-  {
-    title: "Creative Minds",
-    description:
-      "Innovation-driven learning through STEM activities, robotics, coding, and collaborative projects empowers students to solve real-world challenges with confidence.",
-    image:"public/views/creative-mind/img8.jpg",
-    badge: "Future Innovators",
-    accent: "from-violet-500 via-purple-500 to-indigo-600",
-    href: "/CreativeMinds",
-  },
-  {
     title: "Expert Teachers",
     description:
       "Passionate educators combine experience, mentorship, and personalized guidance to inspire academic excellence while nurturing every student's unique potential.",
-    image:"public/views/Expert-Teachers/img7.jpg",
+    image: "/views/Expert-Teachers/img7.jpg",
     badge: "Expert Faculty",
     accent: "from-emerald-500 via-teal-500 to-cyan-600",
     href: "/ExpertTeachers",
@@ -78,8 +68,7 @@ const featureItems: FeatureItem[] = [
     title: "Smart Labs",
     description:
       "Technology-enabled science and innovation laboratories provide immersive, hands-on learning experiences that encourage experimentation, critical thinking, and future-ready skills.",
-    image:
-      "public/views/smartlabs/img7.jpg",
+    image: "/views/smartlabs/img7.jpg",
     badge: "STEM Innovation",
     accent: "from-blue-500 via-indigo-500 to-purple-600",
     href: "/SmartLabs",
@@ -88,8 +77,7 @@ const featureItems: FeatureItem[] = [
     title: "Safe Environment",
     description:
       "A secure, inclusive, and caring campus supported by modern safety measures ensures every child learns with confidence, comfort, and complete peace of mind.",
-    image:
-      "public/views/safeEnvironment/img18.jpg",
+    image: "/views/safeEnvironment/img18.jpg",
     badge: "Safe Campus",
     accent: "from-green-500 via-emerald-500 to-teal-600",
     href: "/SafeEnvironment",
@@ -98,8 +86,7 @@ const featureItems: FeatureItem[] = [
     title: "Annual Celebrations",
     description:
       "Cultural festivals, national events, and community celebrations create joyful experiences that strengthen values, diversity, teamwork, and a vibrant school spirit.",
-    image:
-      "public/views/AnnualCelebration/img19.jpg",
+    image: "/views/AnnualCelebration/img19.jpg",
     badge: "Campus Life",
     accent: "from-pink-500 via-rose-500 to-red-500",
     href: "/AnnualCelebrations",
@@ -113,25 +100,44 @@ const highlights = [
   "Future-ready skills",
 ];
 
-// const facilities = [
-//   {
-//     title: "Modern Labs",
-//     description: "Hands-on science and computer labs built for discovery.",
-//     image:
-//       "https://tse2.mm.bing.net/th/id/OIP.Dz01Coc7gdwEeSJuoMI8CAHaDt?rs=1&pid=ImgDetMain&o=7&rm=3",
-//   },
-//   {
-//     title: "Library Space",
-//     description: "Peaceful reading and digital learning zone.",
-//     image: "/img/liabrary.png",
-//   },
-//   {
-//     title: "Sports Arena",
-//     description: "Encouraging fitness, teamwork, and discipline.",
-//     image:
-//       "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
-//   },
-// ];
+const whyUs = [
+  {
+    icon: BookOpen,
+    title: "Strong academics",
+    description:
+      "Structured learning with clarity, discipline, and consistent support.",
+  },
+  {
+    icon: Trophy,
+    title: "Beyond the classroom",
+    description:
+      "Sports, arts, and activities that build confidence and leadership.",
+  },
+  {
+    icon: FlaskConical,
+    title: "Modern labs",
+    description:
+      "Hands-on learning spaces that make concepts practical and exciting.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Safe campus",
+    description:
+      "A secure environment where students can learn with peace of mind.",
+  },
+  {
+    icon: Sparkles,
+    title: "Premium experience",
+    description:
+      "A polished visual style that feels modern, clean, and elegant.",
+  },
+  {
+    icon: Users,
+    title: "Caring mentors",
+    description:
+      "Teachers who guide, motivate, and support every student personally.",
+  },
+];
 
 const news = [
   {
@@ -154,21 +160,23 @@ const news = [
 
 const HomePage = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
-  const autoplayRef = useRef<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-
   const items = useMemo(() => featureItems, []);
 
   const scrollToIndex = (index: number) => {
     const el = carouselRef.current;
     if (!el) return;
-    const card = el.children[index] as HTMLElement | undefined;
+
+    const nextIndex = Math.max(0, Math.min(index, items.length - 1));
+    const card = el.children[nextIndex] as HTMLElement | undefined;
+
     card?.scrollIntoView({
       behavior: "smooth",
       inline: "center",
       block: "nearest",
     });
-    setActiveIndex(index);
+
+    setActiveIndex(nextIndex);
   };
 
   const scrollPrev = () => {
@@ -182,24 +190,14 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    autoplayRef.current = window.setInterval(() => {
-      setActiveIndex((current) => {
-        const next = (current + 1) % items.length;
-        const el = carouselRef.current;
-        const card = el?.children[next] as HTMLElement | undefined;
-        card?.scrollIntoView({
-          behavior: "smooth",
-          inline: "center",
-          block: "nearest",
-        });
-        return next;
-      });
-    }, 3500);
-
-    return () => {
-      if (autoplayRef.current) window.clearInterval(autoplayRef.current);
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") scrollPrev();
+      if (e.key === "ArrowRight") scrollNext();
     };
-  }, [items.length]);
+
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [activeIndex, items.length]);
 
   return (
     <main className="bg-[#f6f7fb] text-slate-900">
@@ -216,23 +214,22 @@ const HomePage = () => {
               Featured strengths
             </p>
             <p className="mt-2 max-w-2xl text-sm text-slate-500">
-              This version replaces static blocks with an auto-scrolling
-              showcase that feels more refined, more interactive, and more
-              premium.
+              A clean manual showcase designed to feel elegant, responsive, and
+              easy to use.
             </p>
           </div>
 
           <div className="hidden gap-2 md:flex">
             <button
               onClick={scrollPrev}
-              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
               aria-label="Previous card"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={scrollNext}
-              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
               aria-label="Next card"
             >
               <ChevronRight className="h-5 w-5" />
@@ -250,12 +247,14 @@ const HomePage = () => {
               const el = e.currentTarget;
               const children = Array.from(el.children) as HTMLElement[];
               const center = el.scrollLeft + el.clientWidth / 2;
+
               let closest = 0;
               let distance = Number.POSITIVE_INFINITY;
 
               children.forEach((child, index) => {
                 const childCenter = child.offsetLeft + child.offsetWidth / 2;
                 const nextDistance = Math.abs(childCenter - center);
+
                 if (nextDistance < distance) {
                   distance = nextDistance;
                   closest = index;
@@ -266,53 +265,64 @@ const HomePage = () => {
             }}
             className="flex gap-6 overflow-x-auto scroll-smooth pb-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             style={{ scrollSnapType: "x mandatory" }}
+            tabIndex={0}
+            aria-roledescription="carousel"
+            aria-label="Featured school sections"
           >
             {items.map((item, index) => (
-  <Link
-    key={item.title}
-    to={item.href}
-    className="block min-w-[86%] sm:min-w-[52%] lg:min-w-[34%] xl:min-w-[28%]"
-    style={{ scrollSnapAlign: "center" }}
-  >
-    <article className="group relative overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.10)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_rgba(15,23,42,0.16)]">
-      <div className="relative h-[340px] overflow-hidden">
-        <img
-          src={item.image}
-          alt={item.title}
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-        <div
-          className={`absolute left-5 top-5 rounded-full bg-gradient-to-r ${item.accent} px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur`}
-        >
-          {item.badge}
-        </div>
-        <div className="absolute bottom-5 left-5 right-5">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
-            Premium feature
-            <ArrowRight className="h-3.5 w-3.5" />
-          </div>
-        </div>
-      </div>
+              <Link
+                key={item.title}
+                to={item.href}
+                className="block min-w-[86%] sm:min-w-[52%] lg:min-w-[34%] xl:min-w-[28%]"
+                style={{ scrollSnapAlign: "center" }}
+                aria-label={item.title}
+              >
+                <article className="group relative overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.10)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_rgba(15,23,42,0.16)]">
+                  <div className="relative h-[340px] overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src =
+                          "/img/placeholder.png";
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+                    <div
+                      className={`absolute left-5 top-5 rounded-full bg-gradient-to-r ${item.accent} px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur`}
+                    >
+                      {item.badge}
+                    </div>
+                    <div className="absolute bottom-5 left-5 right-5">
+                      <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
+                        Premium feature
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </div>
+                    </div>
+                  </div>
 
-      <div className="space-y-3 p-6">
-        <h3 className="text-2xl font-bold tracking-tight text-slate-900">
-          {item.title}
-        </h3>
-        <p className="text-sm leading-6 text-slate-600">{item.description}</p>
+                  <div className="space-y-3 p-6">
+                    <h3 className="text-2xl font-bold tracking-tight text-slate-900">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-6 text-slate-600">
+                      {item.description}
+                    </p>
 
-        <div className="flex items-center justify-between pt-2">
-          <span className="text-sm font-medium text-slate-400">
-            {index + 1 < 10 ? `0${index + 1}` : index + 1}
-          </span>
-          <span className="text-sm font-semibold text-indigo-600 transition group-hover:translate-x-1">
-            Explore →
-          </span>
-        </div>
-      </div>
-    </article>
-  </Link>
-))}
+                    <div className="flex items-center justify-between pt-2">
+                      <span className="text-sm font-medium text-slate-400">
+                        {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                      </span>
+                      <span className="text-sm font-semibold text-indigo-600 transition group-hover:translate-x-1">
+                        Explore →
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
           </div>
 
           <div className="mt-4 flex justify-center gap-2">
@@ -320,7 +330,7 @@ const HomePage = () => {
               <button
                 key={index}
                 onClick={() => scrollToIndex(index)}
-                className={`h-2.5 rounded-full transition-all ${
+                className={`h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-indigo-400 ${
                   activeIndex === index
                     ? "w-8 bg-indigo-600"
                     : "w-2.5 bg-slate-300"
@@ -338,7 +348,12 @@ const HomePage = () => {
             <img
               src="/assets/image5.jpeg"
               alt="School leadership"
+              loading="lazy"
               className="h-[320px] w-full object-cover transition-transform duration-700 hover:scale-110 md:h-[450px]"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src =
+                  "/img/placeholder.png";
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
             <div className="absolute bottom-4 left-4 rounded-xl bg-white/85 px-4 py-2 text-sm font-medium shadow-md backdrop-blur-md">
@@ -395,7 +410,32 @@ const HomePage = () => {
         </div>
       </Section>
 
-     
+      <Section
+        title="Why Choose Us"
+        subtitle="Premium facilities, outstanding faculty, and a safe, nurturing campus."
+      >
+        <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {whyUs.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.title}
+                className="rounded-[1.75rem] border border-slate-100 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h2 className="text-lg font-semibold text-slate-900">
+                  {item.title}
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </Section>
 
       <Section
         title="Latest News & Events"

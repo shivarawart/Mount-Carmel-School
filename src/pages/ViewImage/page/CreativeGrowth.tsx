@@ -49,6 +49,16 @@ const galleryImages: GalleryImage[] = [
   { src: "/views/Creative-growth/img30.jpg", alt: "Creative Growth 30" },
   { src: "/views/Creative-growth/img31.jpg", alt: "Creative Growth 31" },
   { src: "/views/Creative-growth/img32.jpg", alt: "Creative Growth 32" },
+  { src: "/views/creative-mind/img1.jpg", alt: "Creative Minds 1" },
+  { src: "/views/creative-mind/img2.jpg", alt: "Creative Minds 2" },
+  { src: "/views/creative-mind/img3.jpg", alt: "Creative Minds 3" },
+  { src: "/views/creative-mind/img4.jpg", alt: "Creative Minds 4" },
+  { src: "/views/creative-mind/img5.jpg", alt: "Creative Minds 5" },
+  { src: "/views/creative-mind/img6.jpg", alt: "Creative Minds 6" },
+  { src: "/views/creative-mind/img7.jpg", alt: "Creative Minds 7" },
+  { src: "/views/creative-mind/img8.jpg", alt: "Creative Minds 8" },
+  { src: "/views/creative-mind/img9.jpg", alt: "Creative Minds 9" },
+  { src: "/views/creative-mind/img10.jpg", alt: "Creative Minds 10" },
 ];
 
 export default function CreativeGrowth() {

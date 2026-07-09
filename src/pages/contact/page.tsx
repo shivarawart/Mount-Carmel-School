@@ -38,7 +38,7 @@ const ContactMandatoryPage = () => {
   const pageRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [activeDisclosure, setActiveDisclosure] = useState<number | null>(null);
+  // const [activeDisclosure, setActiveDisclosure] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -158,7 +158,7 @@ const ContactMandatoryPage = () => {
       </Section>
 
       {/* 📜 DISCLOSURE */}
-      <Section
+      {/* <Section
         title="Mandatory Disclosure"
         subtitle="Transparency & Compliance"
         center
@@ -198,7 +198,7 @@ const ContactMandatoryPage = () => {
             </div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* 📝 FORM */}
       <Section

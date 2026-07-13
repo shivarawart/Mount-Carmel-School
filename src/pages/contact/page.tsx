@@ -11,28 +11,6 @@ import Button from "../../components/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const disclosures = [
-  {
-    title: "Affiliation Details",
-    content:
-      "Mount Carmel International School is affiliated with CBSE, New Delhi (Affiliation No: 531833).",
-  },
-  {
-    title: "School Management Committee",
-    content:
-      "The School Management Committee comprises experienced educationists, parents, and community leaders committed to governance and academic excellence.",
-  },
-  {
-    title: "Staff Details",
-    content:
-      "Our teaching and non-teaching staff are highly qualified, regularly trained, and deeply passionate about nurturing young minds.",
-  },
-  {
-    title: "Infrastructure & Safety",
-    content:
-      "State-of-the-art classrooms, science & computer labs, spacious playground, CCTV surveillance, and robust safety protocols ensure a secure learning environment.",
-  },
-];
 
 const ContactMandatoryPage = () => {
   const pageRef = useRef<HTMLDivElement>(null);

@@ -18,34 +18,65 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef<HTMLDivElement | null>(null);
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
+  const menuButtonRef = useRef<HTMLButtonElement | null>(null);
   const location = useLocation();
-
-  useEffect(() => {
-    if (!isOpen || !navRef.current) return;
-
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        navRef.current,
-        { y: -12, opacity: 0, scale: 0.985 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.28, ease: "power2.out" }
-      );
-    }, navRef);
-
-    return () => ctx.revert();
-  }, [isOpen]);
 
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen || !mobileMenuRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        mobileMenuRef.current,
+        { y: -14, opacity: 0, scale: 0.985 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.28, ease: "power2.out" }
+      );
+    }, mobileMenuRef);
+
+    const t = window.setTimeout(() => {
+      firstLinkRef.current?.focus();
+    }, 50);
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("keydown", onKeyDown);
+      ctx.revert();
+    };
+  }, [isOpen]);
+
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-200/70 bg-white/85 backdrop-blur-xl shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-200/70 bg-white/85 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3 rounded-2xl">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-600 text-sm font-semibold text-white shadow-md shadow-indigo-600/20">
-            MC
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-slate-100 shadow-md shadow-indigo-600/10">
+            <img
+              src="/changeimg/c5a31094-e20e-4606-81e5-9c7563a0297a.png"
+              alt="Mount Carmel School logo"
+              className="h-full w-full object-cover"
+            />
           </div>
+
           <div className="leading-tight">
             <h1 className="text-[15px] font-semibold tracking-tight text-slate-900 sm:text-base">
               Mount Carmel School
@@ -65,10 +96,10 @@ export default function Header() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
                   active
                     ? "bg-slate-300 text-white shadow-sm"
-                    : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                    : "text-slate-200 hover:bg-slate-100 hover:text-slate-900"
                 }`}
                 aria-current={active ? "page" : undefined}
               >
@@ -79,6 +110,7 @@ export default function Header() {
         </nav>
 
         <button
+          ref={menuButtonRef}
           type="button"
           onClick={() => setIsOpen((v) => !v)}
           className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 md:hidden"
@@ -92,24 +124,25 @@ export default function Header() {
 
       <div
         id="mobile-menu"
-        ref={navRef}
+        ref={mobileMenuRef}
         className={`border-t border-slate-200 bg-white/95 px-4 pb-5 pt-3 shadow-lg backdrop-blur-xl md:hidden ${
           isOpen ? "block" : "hidden"
         }`}
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-2">
-          {navLinks.map((link) => {
+          {navLinks.map((link, index) => {
             const active = location.pathname === link.path;
 
             return (
               <Link
                 key={link.name}
                 to={link.path}
+                ref={index === 0 ? firstLinkRef : undefined}
                 onClick={() => setIsOpen(false)}
-                className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                className={`rounded-2xl px-4 py-3 text-sm font-medium transition-all duration-200 ${
                   active
-                    ? "bg-slate-200 text-white"
-                    : "bg-slate-50 text-slate-700 hover:bg-slate-100"
+                    ? "bg-slate-900 text-white"
+                    : "bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                 }`}
                 aria-current={active ? "page" : undefined}
               >

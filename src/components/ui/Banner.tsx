@@ -11,7 +11,8 @@ const images = [
   "/assets/image21.jpeg",
   "/assets/image6.jpeg",
   "/assets/image29.jpeg",
-  "/assets/image13.jpeg"
+  "/assets/image13.jpeg",
+  "/changeimg/WhatsApp Image 2026-07-10 at 12.17.02.jpeg"
 ];
 
 const Banner = () => {

@@ -46,26 +46,26 @@ const data: FolderType[] = [
         fileId: "1Rw3GcHKL5FcDPe-FnlVKvGCIenfLGKdb",
       },
       {
-        name:"Recoganation Certificate",
-        type:'pdf',
-        fileId:"1sPpirauBCig0OUxx33IRcuNnxySs9FhX"
+        name: "Recoganation Certificate",
+        type: "pdf",
+        fileId: "1sPpirauBCig0OUxx33IRcuNnxySs9FhX",
       },
       {
         name: "Affidavit",
         type: "pdf",
         fileId: "1pPjpT-3__Pb-RTrxJqfHz0kKzBPgMglF",
       },
-      
+
       {
         name: "NOC",
         type: "pdf",
         fileId: "1s5mhHGy1N8rTLLOEoXNEFfO4QjLEJGIo",
       },
       {
-        name:"Land Certificate",
-        type:"pdf",
-        fileId:"1jHUItZ3DOpWYwJuPoX2Gz9EetZU9xMoc"
-      }
+        name: "Land Certificate",
+        type: "pdf",
+        fileId: "1jHUItZ3DOpWYwJuPoX2Gz9EetZU9xMoc",
+      },
     ],
   },
 
@@ -73,11 +73,11 @@ const data: FolderType[] = [
     name: "Academic Records",
     files: [
       {
-        name:"X Result",
-        type:"pdf",
-        fileId:"1AztQwtOeJktchwdpt0CIRqJcW_CfP7h0"
+        name: "X Result",
+        type: "pdf",
+        fileId: "1AztQwtOeJktchwdpt0CIRqJcW_CfP7h0",
       },
-       {
+      {
         name: "Board Examination Result",
         type: "pdf",
         fileId: "1ZqpbEdq6sNyTOtMt92pwwukbsmUIEOfL",
@@ -88,19 +88,20 @@ const data: FolderType[] = [
         fileId: "11G39bNgW9zCMFgdUhj6YJow9H8_3i5pQ",
       },
       {
-        name:"XII Acadimic Result",
-        type:"pdf",
-        fileId:"1oZ9sCM-T95cSiyue4geuFsGjSNlpSea0"
+        name: "XII Acadimic Result",
+        type: "pdf",
+        fileId: "1oZ9sCM-T95cSiyue4geuFsGjSNlpSea0",
       },
       {
-         name: "School Planner",
+        name: "School Planner",
         type: "pdf",
         fileId: "13FHH-M2zRvBkfzYx2FPANWg9XE3ol81c",
-      },{
-        name:"List of PTA Executive committe",
-        type:'pdf',
-        fileId:"1DiSN137a9jC1V9G7k8l5cqllCgLUvJBL"
-      }
+      },
+      {
+        name: "List of PTA Executive committe",
+        type: "pdf",
+        fileId: "1DiSN137a9jC1V9G7k8l5cqllCgLUvJBL",
+      },
     ],
   },
 
@@ -120,7 +121,8 @@ const data: FolderType[] = [
       {
         name: "TGT Staff",
         type: "pdf",
-        fileId: "1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-",
+        fileId:
+          "17645eoy4jNKIhMaCVDESD9aH1_qigrNU",
       },
       {
         name: "PRT Staff",
@@ -133,21 +135,22 @@ const data: FolderType[] = [
         fileId: "1XgpeQncTBqveKNMxrk2VOECN1UQJtTOl",
       },
       {
-        name:"Other Staff",
-        type:"pdf",
-        fileId:"10MTECYIoBcaXzi5rytnMcSvfnLVbo-Mw"
-      },{
-         name: "Management Committee",
-      type: "pdf",
-      fileId: "12cXhnMiFfFz8QsOjyMSqLAzfr0uiqPgh",
-      }
+        name: "Other Staff",
+        type: "pdf",
+        fileId: "10MTECYIoBcaXzi5rytnMcSvfnLVbo-Mw",
+      },
+      {
+        name: "Management Committee",
+        type: "pdf",
+        fileId: "12cXhnMiFfFz8QsOjyMSqLAzfr0uiqPgh",
+      },
     ],
   },
 
   {
     name: "Finance & Infrastructure",
     files: [
-       {
+      {
         name: "Building Safety Certificate",
         type: "pdf",
         fileId: "1UYG1Bczzdfe7jnlpybkGizihR62heLdy",
@@ -162,11 +165,12 @@ const data: FolderType[] = [
         type: "pdf",
         fileId: "1XXjIk5UZgOEliPnKWXE8o2qPSzR3qWAF",
       },
-        {
+      {
         name: "Hygienic Certificate",
         type: "pdf",
         fileId: "10n0iRDEU56tN72I7ylt_mreZGEMfTyhW",
-      },{
+      },
+      {
         name: " School Infrastructure Details",
         type: "pdf",
         fileId: "15tzHxqC9BOcxtiVnskKEPQO1z3VOE7MD",
@@ -181,7 +185,7 @@ const data: FolderType[] = [
         name: "Fire Safety Certificate",
         type: "pdf",
         fileId: "18BUI-YutYDi3cThOzD80T2_45AXf1n2s",
-      },   
+      },
     ],
   },
 ];
@@ -329,88 +333,224 @@ export default function MandatoryDisclosurePage({
         subtitle="Access official documents, certificates, and academic records"
         center
       >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 mt-10 space-y-16">
-
+        <div className="max-w-7xl mx-auto px-4 md:px-6 mt-10 space-y-16">
           {/* 🌟 INTRO */}
-          <div className="text-center max-w-3xl mx-auto reveal">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Transparency & Excellence
-            </h2>
-                <p className="text-gray-600 leading-relaxed text-base md:text-lg max-w-3xl">
-  We believe in complete transparency. All important documents including 
-  affiliation, staff details, academic performance, and infrastructure 
-  records are available for public access{""}
+          <div className="relative max-w-7xl mx-auto reveal">
+            {/* Glass Container */}
+            <div className="relative overflow-hidden rounded-[40px] border border-slate-200/70 bg-gradient-to-br from-white via-blue-50/40 to-white shadow-[0_30px_80px_rgba(15,23,42,0.08)]">
+              {/* Background Glow */}
+              <div className="absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px]" />
+              <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-sky-400/10 blur-[120px]" />
 
-  <a
-    href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
-    className="inline-flex items-center gap-1.5 text-gray-900 font-medium group transition-all duration-300"
-  >
-    <span className="relative">
-      inspection video
-      <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
-    </span>
+              <div className="relative grid lg:grid-cols-2 gap-14 items-center p-8 md:p-14 lg:p-20">
+                {/* Left Content */}
+                <div>
+                  {/* Badge */}
+                  <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 mb-8">
+                    <span className="h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    <span className="text-sm font-semibold tracking-wide text-blue-700 uppercase">
+                      Trust • Transparency • Excellence
+                    </span>
+                  </div>
 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 -960 960 960"
-      fill="currentColor"
-      className="w-[15px] h-[15px] opacity-70 transition-transform duration-300 group-hover:scale-110"
-    >
-      <path d="M320-200v-560l440 280-440 280Z" />
-    </svg>
-  </a>
-</p>
+                  {/* Heading */}
+
+                  <h2 className="text-4xl md:text-5xl xl:text-6xl font-black leading-tight tracking-tight text-slate-900">
+                    Transparency
+                    <br />
+                    <span className="bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent">
+                      You Can Verify.
+                    </span>
+                  </h2>
+
+                  {/* Description */}
+
+                  <p className="mt-8 text-lg leading-8 text-slate-600 max-w-2xl">
+                    We believe that trust begins with complete openness. Every
+                    important document—including school affiliation, faculty
+                    details, academic performance, infrastructure records, and
+                    compliance reports—is publicly available for students,
+                    parents, and educational authorities.
+                    <span className="block mt-5 font-semibold text-slate-900">
+                      Watch our official inspection video to experience our
+                      campus, classrooms, facilities, and learning environment
+                      firsthand.
+                    </span>
+                  </p>
+
+                  {/* CTA */}
+
+                  <div className="flex flex-wrap gap-4 mt-10">
+                    <a
+                      href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-sky-500 px-7 py-4 font-semibold text-white shadow-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-blue-300"
+                    >
+                      <svg
+                        xmlns="https://youtu.be/n_K1pH4Q9ls"
+                        viewBox="0 -960 960 960"
+                        fill="currentColor"
+                        className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+                      >
+                        <path d="M320-200v-560l440 280-440 280Z" />
+                      </svg>
+                      Watch Inspection Video
+                    </a>
+
+                    <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm">
+                      <div className="flex -space-x-2 overflow-hidden">
+                        <img
+                          src="/changeimg/WhatsApp Image 2026-07-10 at 12.05.37.jpeg"
+                          alt="Principal"
+                          className="h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                        />
+                        <img
+                          src="/changeimg/WhatsApp Image 2026-07-10 at 12.05.37 (1).jpeg"
+                          alt="Teacher"
+                          className="h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                        />
+                      
+                      </div>
+
+                      <div>
+                        <p className="font-semibold text-slate-900">
+                          Expert Faculty
+                        </p>
+                        <p className="text-sm text-slate-500">
+                          Passionate Educators with Years of Experience
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Video */}
+
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-[32px] bg-gradient-to-r from-blue-500/20 to-cyan-400/20 blur-2xl"></div>
+
+                  <div className="relative overflow-hidden w-full rounded-[32px] border border-slate-200 bg-white shadow-2xl">
+                    <a
+                      href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-sky-500 px-7 py-4 font-semibold text-white shadow-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-blue-300"
+                    >
+                      <img
+                        src="/changeimg/mountcarmel.png"
+                        alt="Mount Carmel School Thumbnail"
+                        width={1280}
+                        height={720}
+                        className="w-full aspect-video object-cover"
+                      />
+                    </a>
+                  </div>
+
+                  {/* Floating Card */}
+
+                  <div className="absolute -bottom-6 left-8 rounded-2xl bg-white/95 backdrop-blur-xl border border-slate-200 px-6 py-4 shadow-xl">
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 text-white text-xl">
+                        ✓
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-slate-900">
+                          Official Campus Inspection
+                        </h4>
+
+                        <p className="text-sm text-slate-500">
+                          Real classrooms • Infrastructure • Facilities
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* 📊 STATS */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { label: "Students", value: "900+" },
-              { label: "Qualified Staff", value: "40+" },
-              { label: "Board Results", value: "100%" },
-              { label: "Years of Excellence", value: "8+" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="reveal text-center p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl md:text-3xl font-bold text-indigo-600">
-                  {item.value}
-                </h3>
-                <p className="text-gray-500 text-sm mt-2">{item.label}</p>
-              </div>
-            ))}
+          <div className="relative mt-24 reveal">
+            {/* Background Glow */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-80 w-80 rounded-full bg-blue-500/10 blur-[140px]" />
+
+            <div className="relative grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+              {[
+                {
+                  value: "900+",
+                  label: "Students",
+                  icon: "🎓",
+                  color: "from-blue-500 to-cyan-500",
+                },
+                {
+                  value: "40+",
+                  label: "Qualified Faculty",
+                  icon: "👨‍🏫",
+                  color: "from-indigo-500 to-blue-600",
+                },
+                {
+                  value: "100%",
+                  label: "Board Results",
+                  icon: "🏆",
+                  color: "from-sky-500 to-cyan-500",
+                },
+                {
+                  value: "8+",
+                  label: "Years of Excellence",
+                  icon: "⭐",
+                  color: "from-violet-500 to-indigo-600",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-[28px] border border-slate-200/70 bg-white/80 backdrop-blur-xl p-8 transition-all duration-700 hover:-translate-y-3 hover:border-blue-200 hover:shadow-[0_30px_80px_rgba(59,130,246,0.18)]"
+                >
+                  {/* Gradient Glow */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 transition-opacity duration-700 group-hover:opacity-[0.05]`}
+                  />
+
+                  {/* Decorative Circle */}
+                  <div
+                    className={`absolute -right-10 -top-10 h-28 w-28 rounded-full bg-gradient-to-br ${item.color} opacity-10 blur-2xl`}
+                  />
+
+                  {/* Icon */}
+                  <div
+                    className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${item.color} text-3xl shadow-lg transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110`}
+                  >
+                    {item.icon}
+                  </div>
+
+                  {/* Number */}
+                  <h3
+                    className={`mt-8 bg-gradient-to-r ${item.color} bg-clip-text text-5xl font-black tracking-tight text-transparent`}
+                  >
+                    {item.value}
+                  </h3>
+
+                  {/* Label */}
+                  <p className="mt-3 text-lg font-semibold text-slate-800">
+                    {item.label}
+                  </p>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-500">
+                    Delivering excellence through quality education, dedicated
+                    faculty, and a future-focused learning environment.
+                  </p>
+
+                  {/* Bottom Line */}
+                  <div
+                    className={`mt-8 h-1 w-0 rounded-full bg-gradient-to-r ${item.color} transition-all duration-700 group-hover:w-full`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* 📂 INFO CARDS */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Academic Records",
-                desc: "Student results and reports.",
-              },
-              {
-                title: "Staff Details",
-                desc: "Qualified faculty data.",
-              },
-              {
-                title: "Infrastructure",
-                desc: "Facilities and safety records.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="reveal p-6 rounded-3xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
-              >
-                <h3 className="text-lg font-semibold mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
 
           {/* 🔍 HEADER */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
@@ -465,16 +605,12 @@ export default function MandatoryDisclosurePage({
               </div>
             )}
           </div>
-
         </div>
       </Section>
 
       {/* 🔍 MODAL */}
       {activeFile && (
-        <PreviewModal
-          file={activeFile}
-          onClose={() => setActiveFile(null)}
-        />
+        <PreviewModal file={activeFile} onClose={() => setActiveFile(null)} />
       )}
     </main>
   );

@@ -14,7 +14,7 @@ const facilitiesData = [
     title: "Smart Classrooms",
     description: "Interactive digital learning with modern technology",
     icon: "🖥️",
-    image: "img/smartc.png",
+    image: "/changeimg/WhatsApp Image 2026-07-10 at 12.13.54.jpeg",
   },
   {
     title: "Science Labs",
@@ -38,13 +38,13 @@ const facilitiesData = [
     title: "Transport Facility",
     description: "Safe and convenient travel to and from school",
     icon: "🚌",
-    image: "img/trans.png",
+    image: "/changeimg/WhatsApp Image 2026-07-10 at 12.13.00.jpeg",
   },
   {
     title: "CCTV Surveillance",
     description: "Ensuring a secure and safe campus environment",
     icon: "📹",
-    image: "img/cctv.png",
+    image: "/changeimg/WhatsApp Image 2026-07-10 at 12.16.02.jpeg",
   },
 ];
 

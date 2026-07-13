@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import PremiumMessageSection from "./MessageSection";
+
 import {
   Download,
   Eye,
@@ -17,10 +19,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Banner from "../../components/ui/Banner";
 import Section from "../../components/ui/Section";
-import Card from "../../components/ui/Card";
+// import Card from "../../components/ui/Card";
 import PhilosophySection from "../../components/ui/PhilosophySection";
 
 gsap.registerPlugin(ScrollTrigger);
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                  DATA                                      */
@@ -298,69 +302,8 @@ const AboutPage = () => {
         </section>
 
         {/* VISION + MISSION */}
-        <Section
-          title="Our Vision & Mission"
-          subtitle="Values and principles that shape our educational excellence"
-          center
-        >
-          <div className="grid gap-10 md:grid-cols-2">
-            <div className="reveal">
-              <Card
-                title="Our Vision"
-                description="Principal's Message
 
-Welcome to Mount Carmel International School!
-
-It is with great pride and immense pleasure that I welcome you to the Mount Carmel International School family. Our school is committed to nurturing young minds in a safe, inclusive, and inspiring environment where every child is encouraged to discover their potential and strive for excellence.
-
-At Mount Carmel International School, we believe that education goes beyond textbooks. We aim to develop confident, compassionate, responsible, and lifelong learners who are equipped with the knowledge, skills, and values needed to succeed in an ever-changing world. Through a balanced curriculum, innovative teaching practices, and a wide range of co-curricular activities, we ensure the holistic development of every student.
-
-Our dedicated team of educators works tirelessly to create meaningful learning experiences that inspire curiosity, creativity, critical thinking, and collaboration. We encourage our students to embrace challenges, respect diversity, uphold strong moral values, and contribute positively to society.
-
-We firmly believe that the partnership between parents, teachers, and the school plays a vital role in shaping the future of our children. Together, we can empower our students to become confident global citizens and compassionate leaders of tomorrow.
-
-As you explore our website, I invite you to learn more about our vibrant school community and the opportunities we provide for every child to learn, grow, and excel.
-
-Thank you for placing your trust in Mount Carmel International School. We look forward to working together to build a bright and successful future for every student.
-
-With warm regards,
-
-Principal
-Mount Carmel International School"
-                image="/assets/image7.jpeg"
-              />
-            </div>
-
-            <div className="reveal">
-              <Card
-                title="Our Mission"
-                description="Mr.Jagdev's Message
-
-Dear Parents, Students, and Well-Wishers,
-
-It is my privilege to welcome you to Mount Carmel International School, an institution dedicated to providing quality education rooted in faith, values, and academic excellence.
-
-We believe that education is not merely the pursuit of knowledge but the foundation for building character, nurturing compassion, and empowering young minds to become responsible citizens and future leaders. Inspired by the timeless values of love, integrity, service, and respect, our mission is to create a learning environment where every child is encouraged to discover their unique potential and develop into a confident, caring, and capable individual.
-
-In today's rapidly evolving world, education must equip learners with not only academic proficiency but also critical thinking, creativity, adaptability, and strong moral values. Guided by the vision of the CBSE curriculum and enriched through experiential learning, innovation, and holistic development, we strive to prepare our students for the challenges and opportunities of the twenty-first century.
-
-At Mount Carmel International School, our dedicated faculty, supportive parents, and motivated students work together as one family to create a culture of excellence. We encourage every learner to dream with confidence, work with dedication, lead with humility, and serve society with compassion.
-
-As an institution, we remain committed to providing a safe, inclusive, and inspiring environment where every child is valued, respected, and empowered to achieve their highest aspirations. Our aim is not only to shape successful professionals but also individuals who uphold ethical values, contribute positively to society, and make a meaningful difference in the world.
-
-I extend my heartfelt gratitude to our parents for their continued trust and partnership. Together, let us nurture a generation that is intellectually enlightened,h morally upright, spiritually grounded, and socially responsible.
-
-May Almighty God continue to bless our students, staff, parents, and the entire Mount Carmel family as we move forward with faith, wisdom, and excellence.
-
-With warm regards,
-
-Mr.Jagdev
-Mount Carmel International School"
-                image="https://images.unsplash.com/photo-1498079022511-d15614cb1c02"
-              />
-            </div>
-          </div>
-        </Section>
+        <PremiumMessageSection />
 
         {/* PHILOSOPHY */}
         <PhilosophySection />
@@ -372,64 +315,83 @@ Mount Carmel International School"
           bg="gradient"
           center
         >
-          <div className="achievements-grid grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Academic Excellence",
-                desc: "Outstanding board examination performance with students consistently scoring above 95%.",
-                img: "/img/twelth result.png",
-                icon: GraduationCap,
-              },
-              {
-                title: "Sports Championships",
-                desc: "Winners across inter-school and state-level tournaments in multiple disciplines.",
-                img: "/img/sports.png",
-                icon: ShieldCheck,
-              },
-              {
-                title: "Olympiad Achievers",
-                desc: "National and international Olympiad achievers bringing pride to the institution.",
-                img: "/img/olmp.png",
-                icon: Users,
-              },
-            ].map((item, i) => {
-              const Icon = item.icon;
+          <div className="relative mx-auto max-w-7xl">
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.20),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.75),transparent_35%)]" />
 
-              return (
-                <div key={i} className="reveal achievement-card group">
-                  <div className="relative overflow-hidden rounded-[2rem] border border-white/30 bg-white/70 backdrop-blur-2xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 h-full flex flex-col">
-                    {/* IMAGE */}
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={item.img}
-                        alt={item.title}
-                        className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
+            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+              {[
+                {
+                  title: "Academic Excellence",
+                  desc: "Outstanding board examination performance with students consistently achieving exceptional results and setting new benchmarks in academic excellence every year.",
+                  img: "/img/twelth result.png",
+                  badge: "Top Results",
+                  icon: GraduationCap,
+                },
+                {
+                  title: "Sports Championships",
+                  desc: "Champions across district, state, and inter-school competitions, inspiring teamwork, discipline, resilience, and a passion for excellence beyond academics.",
+                  img: "/img/sports.png",
+                  badge: "Champions",
+                  icon: ShieldCheck,
+                },
+                {
+                  title: "Olympiad Achievers",
+                  desc: "Our talented students proudly represent the school by earning distinctions in prestigious national and international Olympiad competitions.",
+                  img: "/img/olmp.png",
+                  badge: "Olympiad Stars",
+                  icon: Users,
+                },
+              ].map((item, index) => {
+                const Icon = item.icon;
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent" />
+                return (
+                  <div key={index} className="group relative h-full">
+                    <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-sky-500/15 blur-3xl transition-all duration-700 group-hover:bg-sky-500/25" />
 
-                      <div className="absolute top-5 left-5 w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white">
-                        <Icon size={26} />
+                    <div className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/30 bg-white/20 shadow-[0_24px_70px_rgba(15,23,42,0.12)] backdrop-blur-2xl transition-all duration-500 hover:-translate-y-2 hover:border-sky-200 hover:shadow-[0_30px_90px_rgba(37,99,235,0.22)]">
+                      <div className="relative h-72 overflow-hidden sm:h-80">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                        />
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-900/20 to-transparent" />
+
+                        <div className="absolute left-5 top-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/30 bg-white/15 text-white shadow-lg backdrop-blur-xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                          <Icon className="h-7 w-7" />
+                        </div>
+
+                        <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
+                          <div className="rounded-full border border-white/20 bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-xl">
+                            {item.badge}
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div className="flex flex-1 flex-col p-7 sm:p-8">
+                        <div className="mb-4 inline-flex w-fit rounded-full bg-sky-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
+                          Achievement
+                        </div>
+
+                        <h3 className="text-2xl font-bold tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-sky-700 sm:text-[2rem]">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-5 flex-grow text-[15px] leading-8 text-slate-600 sm:text-[16px]">
+                          {item.desc}
+                        </p>
+
+                       
                       </div>
                     </div>
-
-                    {/* CONTENT */}
-                    <div className="p-8 flex flex-col flex-grow">
-                      <h3 className="text-2xl font-bold tracking-tight mb-4">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-gray-600 leading-relaxed flex-grow">
-                        {item.desc}
-                      </p>
-                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </Section>
-
         {/* STAFF DETAILS */}
         <Section
           title="Faculty & Staff Details"

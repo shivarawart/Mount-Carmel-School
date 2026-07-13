@@ -144,7 +144,7 @@ const news = [
     title: "Admissions 2026",
     description: "Applications are now open.",
     image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
+      "/changeimg/WhatsApp Image 2026-07-10 at 12.48.29.jpeg",
   },
   {
     title: "Annual Function",

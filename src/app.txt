@@ -392,3 +392,148 @@ export default function MandatoryDisclosurePage({
     </main>
   );
 }
+
+
+  <Section
+          title="Leadership That Inspires Excellence"
+          subtitle="Meet the visionary leaders dedicated to shaping confident learners, responsible citizens, and future leaders."
+          center
+        >
+          <div className="mx-auto max-w-7xl space-y-16">
+            {/* Principal */}
+
+            <article className="group overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+              <div className="grid lg:grid-cols-[42%_58%]">
+                {/* Image */}
+
+                <div className="relative h-[950px] overflow-hidden">
+                  <img
+                    src="/changeimg/WhatsApp Image 2026-07-10 at 12.05.37.jpeg"
+                    alt="Principal"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+                  <div className="absolute bottom-10 left-10">
+                    <span className="rounded-full bg-white/95 px-5 py-2 text-sm font-semibold">
+                      Principal's Message
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+
+                <div className="flex flex-col justify-center p-14">
+                  <span className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">
+                    Principal's Message
+                  </span>
+                  <div className="mt-8 h-20 w-[3px] rounded-full bg-blue-600" />
+                  <p className="mt-8 text-lg leading-9 text-slate-600">
+                    Welcome to{""}
+                    <strong>Mount Carmel International School</strong>, where
+                    education extends far beyond the classroom. We are committed
+                    to creating a safe, inclusive, and inspiring environment
+                    where every child is encouraged to explore their talents,
+                    build confidence, and pursue excellence. Through innovative
+                    teaching, holistic development, and strong moral values, we
+                    prepare students to become compassionate, responsible, and
+                    future-ready global citizens. Together with our dedicated
+                    educators and supportive parents, we strive to nurture
+                    curiosity, creativity, leadership, and lifelong learning in
+                    every child.
+                  </p>
+
+                 
+
+                  <div className="mt-10 flex items-center justify-between">
+                    <div>
+                      <h4 className="text-xl font-bold">Principal</h4>
+
+                      <p className="text-slate-500">
+                        Mount Carmel International School
+                      </p>
+                    </div>
+
+                    <button className="rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-slate-900">
+                      Read Full Message →
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            {/* Chairman */}
+
+            <article className="group overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+              <div className="grid lg:grid-cols-[58%_42%]">
+                {/* Content */}
+
+                <div className="order-2 flex flex-col justify-center p-14 lg:order-1">
+                  <span className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-600">
+                    Chairman's Message
+                  </span>
+
+                  <h2 className="mt-4 text-5xl font-bold leading-tight text-slate-900">
+                    Building Character,
+                    <br />
+                    Inspiring Leadership &
+                    <br />
+                    Academic Excellence
+                  </h2>
+
+                  <div className="mt-8 h-20 w-[3px] rounded-full bg-amber-500" />
+
+                  <p className="mt-8 text-lg leading-9 text-slate-600">
+                    At <strong>Mount Carmel International School</strong>, we
+                    believe that education is the foundation of character,
+                    leadership, and lifelong success. Our mission is to provide
+                    every learner with an environment that promotes academic
+                    excellence while developing integrity, compassion,
+                    creativity, and confidence. Guided by the CBSE curriculum
+                    and enriched through innovation, experiential learning, and
+                    dedicated mentorship, we empower students to become
+                    responsible citizens prepared for the opportunities and
+                    challenges of the future.
+                  </p>
+
+                  <blockquote className="mt-8 border-l-4 border-amber-500 pl-6 italic text-slate-700">
+                    "True success is measured not only by academic achievement,
+                    but by the values, character, and compassion our students
+                    carry throughout life."
+                  </blockquote>
+
+                  <div className="mt-10 flex items-center justify-between">
+                    <div>
+                      <h4 className="text-xl font-bold">Mr. Jagdev</h4>
+
+                      <p className="text-slate-500">Chairman</p>
+                    </div>
+
+                    <button className="rounded-full bg-amber-500 px-8 py-4 font-semibold text-white transition hover:bg-slate-900">
+                      Read Full Message →
+                    </button>
+                  </div>
+                </div>
+
+                {/* Image */}
+
+                <div className="relative order-1 h-[950px] overflow-hidden lg:order-2">
+                  <img
+                    src="/changeimg/WhatsApp Image 2026-07-10 at 12.05.37 (1).jpeg"
+                    alt="Chairman"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+                  <div className="absolute bottom-10 right-10">
+                    <span className="rounded-full bg-white/95 px-5 py-2 text-sm font-semibold">
+                      Chairman's Message
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </Section>

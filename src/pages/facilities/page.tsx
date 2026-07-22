@@ -20,7 +20,7 @@ const facilitiesData = [
     title: "Science Labs",
     description: "Hands-on experiments with state-of-the-art equipment",
     icon: "🔬",
-    image: "img/lab.png",
+    image: "/views/smartlabs/img5.jpg",
   },
   {
     title: "Library",

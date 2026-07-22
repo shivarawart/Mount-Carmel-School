@@ -335,27 +335,22 @@ export default function MandatoryDisclosurePage({
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 mt-10 space-y-16">
           {/* 🌟 INTRO */}
-          <div className="relative max-w-7xl mx-auto reveal">
-            {/* Glass Container */}
-            <div className="relative overflow-hidden rounded-[40px] border border-slate-200/70 bg-gradient-to-br from-white via-blue-50/40 to-white shadow-[0_30px_80px_rgba(15,23,42,0.08)]">
-              {/* Background Glow */}
-              <div className="absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px]" />
-              <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-sky-400/10 blur-[120px]" />
 
-              <div className="relative grid lg:grid-cols-2 gap-14 items-center p-8 md:p-14 lg:p-20">
-                {/* Left Content */}
-                <div>
-                  {/* Badge */}
-                  <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 mb-8">
-                    <span className="h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
-                    <span className="text-sm font-semibold tracking-wide text-blue-700 uppercase">
+          <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 reveal">
+            <div className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] border border-slate-200/70 bg-gradient-to-br from-white via-blue-50/40 to-white shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+              <div className="absolute -top-24 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-blue-500/10 blur-[90px] sm:-top-28 sm:h-72 sm:w-72 sm:blur-[110px] lg:-top-32 lg:h-80 lg:w-80 lg:blur-[120px]" />
+              <div className="absolute bottom-0 right-0 h-44 w-44 rounded-full bg-sky-400/10 blur-[90px] sm:h-56 sm:w-56 sm:blur-[110px] lg:h-72 lg:w-72 lg:blur-[120px]" />
+
+              <div className="relative grid grid-cols-1 items-center gap-8 p-5 sm:gap-10 sm:p-8 md:p-10 lg:grid-cols-2 lg:gap-14 lg:p-16 xl:p-20">
+                <div className="order-2 max-w-2xl lg:order-1">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 sm:px-5 mb-6 sm:mb-8">
+                    <span className="h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
+                    <span className="text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.18em] text-blue-700 uppercase">
                       Trust • Transparency • Excellence
                     </span>
                   </div>
 
-                  {/* Heading */}
-
-                  <h2 className="text-4xl md:text-5xl xl:text-6xl font-black leading-tight tracking-tight text-slate-900">
+                  <h2 className="text-[clamp(2rem,7vw,4.8rem)] font-black leading-[0.95] tracking-tight text-slate-900">
                     Transparency
                     <br />
                     <span className="bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent">
@@ -363,61 +358,57 @@ export default function MandatoryDisclosurePage({
                     </span>
                   </h2>
 
-                  {/* Description */}
-
-                  <p className="mt-8 text-lg leading-8 text-slate-600 max-w-2xl">
+                  <p className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
                     We believe that trust begins with complete openness. Every
                     important document—including school affiliation, faculty
                     details, academic performance, infrastructure records, and
                     compliance reports—is publicly available for students,
                     parents, and educational authorities.
-                    <span className="block mt-5 font-semibold text-slate-900">
-                      Watch our official inspection video to experience our
-                      campus, classrooms, facilities, and learning environment
-                      firsthand.
-                    </span>
                   </p>
 
-                  {/* CTA */}
+                  <p className="mt-4 max-w-xl text-[15px] leading-7 font-semibold text-slate-900 sm:text-base sm:leading-8">
+                    Watch our official inspection video to experience our
+                    campus, classrooms, facilities, and learning environment
+                    firsthand.
+                  </p>
 
-                  <div className="flex flex-wrap gap-4 mt-10">
+                  <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:mt-10">
                     <a
                       href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-sky-500 px-7 py-4 font-semibold text-white shadow-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-blue-300"
+                      className="group inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-sky-500 px-6 py-4 text-sm sm:text-base font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-blue-300 sm:w-auto sm:px-7"
                     >
                       <svg
-                        xmlns="https://youtu.be/n_K1pH4Q9ls"
-                        viewBox="0 -960 960 960"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
                         fill="currentColor"
                         className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
                       >
-                        <path d="M320-200v-560l440 280-440 280Z" />
+                        <path d="M8 5v14l11-7z" />
                       </svg>
                       Watch Inspection Video
                     </a>
 
-                    <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm">
+                    <div className="flex w-full items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm sm:w-auto sm:px-5">
                       <div className="flex -space-x-2 overflow-hidden">
                         <img
                           src="/changeimg/WhatsApp Image 2026-07-10 at 12.05.37.jpeg"
                           alt="Principal"
-                          className="h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                          className="h-8 w-8 rounded-full object-cover ring-2 ring-white sm:h-9 sm:w-9"
                         />
                         <img
                           src="/changeimg/WhatsApp Image 2026-07-10 at 12.05.37 (1).jpeg"
                           alt="Teacher"
-                          className="h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                          className="h-8 w-8 rounded-full object-cover ring-2 ring-white sm:h-9 sm:w-9"
                         />
-                      
                       </div>
 
-                      <div>
-                        <p className="font-semibold text-slate-900">
+                      <div className="min-w-0">
+                        <p className="truncate font-semibold text-slate-900">
                           Expert Faculty
                         </p>
-                        <p className="text-sm text-slate-500">
+                        <p className="truncate text-xs sm:text-sm text-slate-500">
                           Passionate Educators with Years of Experience
                         </p>
                       </div>
@@ -425,41 +416,34 @@ export default function MandatoryDisclosurePage({
                   </div>
                 </div>
 
-                {/* Video */}
+                <div className="relative order-1 lg:order-2">
+                  <div className="absolute inset-0 rounded-[24px] sm:rounded-[32px] bg-gradient-to-r from-blue-500/20 to-cyan-400/20 blur-2xl" />
 
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-[32px] bg-gradient-to-r from-blue-500/20 to-cyan-400/20 blur-2xl"></div>
-
-                  <div className="relative overflow-hidden w-full rounded-[32px] border border-slate-200 bg-white shadow-2xl">
-                    <a
+                  <div className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] border border-slate-200 bg-white shadow-2xl">
+                    <div className="aspect-video w-full">
+     <a
                       href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-sky-500 px-7 py-4 font-semibold text-white shadow-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-blue-300"
                     >
                       <img
                         src="/changeimg/mountcarmel.png"
                         alt="Mount Carmel School Thumbnail"
-                        width={1280}
-                        height={720}
-                        className="w-full aspect-video object-cover"
-                      />
-                    </a>
+                        className="h-full w-full object-auto"
+                        />
+                      </a>
+                    </div>
                   </div>
 
-                  {/* Floating Card */}
-
-                  <div className="absolute -bottom-6 left-8 rounded-2xl bg-white/95 backdrop-blur-xl border border-slate-200 px-6 py-4 shadow-xl">
+                  <div className="mt-4 rounded-2xl border border-slate-200 bg-white/95 px-4 py-4 shadow-xl backdrop-blur-xl sm:absolute sm:-bottom-6 sm:left-6 sm:mt-0 sm:px-6 sm:py-4">
                     <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 text-white text-xl">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 text-xl text-white sm:h-12 sm:w-12">
                         ✓
                       </div>
-
                       <div>
                         <h4 className="font-bold text-slate-900">
                           Official Campus Inspection
                         </h4>
-
                         <p className="text-sm text-slate-500">
                           Real classrooms • Infrastructure • Facilities
                         </p>

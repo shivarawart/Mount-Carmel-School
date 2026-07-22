@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import PremiumMessageSection from "./MessageSection";
+import PremiumMessageSectionA from "./SectionA";
+import PremiumMessageSectionB from "./SectionB";
+
 
 import {
   Download,
@@ -303,7 +305,15 @@ const AboutPage = () => {
 
         {/* VISION + MISSION */}
 
-        <PremiumMessageSection />
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 lg:flex-row">
+          <div className="flex-1">
+            <PremiumMessageSectionA />
+          </div>
+
+          <div className="flex-1">
+            <PremiumMessageSectionB />
+          </div>
+        </div>
 
         {/* PHILOSOPHY */}
         <PhilosophySection />
@@ -366,7 +376,6 @@ const AboutPage = () => {
                           <div className="rounded-full border border-white/20 bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-xl">
                             {item.badge}
                           </div>
-
                         </div>
                       </div>
 
@@ -382,8 +391,6 @@ const AboutPage = () => {
                         <p className="mt-5 flex-grow text-[15px] leading-8 text-slate-600 sm:text-[16px]">
                           {item.desc}
                         </p>
-
-                       
                       </div>
                     </div>
                   </div>

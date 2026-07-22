@@ -40,12 +40,12 @@ export default function Header() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         mobileMenuRef.current,
-        { y: -14, opacity: 0, scale: 0.985 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.28, ease: "power2.out" }
+        { y: -16, opacity: 0, scale: 0.98 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.28, ease: "power3.out" },
       );
     }, mobileMenuRef);
 
-    const t = window.setTimeout(() => {
+    const timer = window.setTimeout(() => {
       firstLinkRef.current?.focus();
     }, 50);
 
@@ -59,35 +59,40 @@ export default function Header() {
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      clearTimeout(t);
+      clearTimeout(timer);
       window.removeEventListener("keydown", onKeyDown);
       ctx.revert();
     };
   }, [isOpen]);
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-200/70 bg-white/85 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur-xl">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/40 bg-white/75 backdrop-blur-2xl shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-3 rounded-2xl">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-slate-100 shadow-md shadow-indigo-600/10">
+        <Link
+          to="/"
+          className="group flex items-center gap-3 rounded-2xl outline-none transition-transform duration-200 hover:scale-[1.01] focus-visible:ring-2 focus-visible:ring-slate-900/20"
+        >
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-black/5">
             <img
-              src="/changeimg/c5a31094-e20e-4606-81e5-9c7563a0297a.png"
+              src="/changeimg/school logo with coloured Background.png"
               alt="Mount Carmel School logo"
               className="h-full w-full object-cover"
             />
           </div>
 
-          <div className="leading-tight">
-            <h1 className="text-[15px] font-semibold tracking-tight text-slate-900 sm:text-base">
+          <div className="min-w-0 leading-tight">
+            <h1 className="truncate text-[15px] font-semibold tracking-tight text-slate-900 sm:text-base lg:text-[17px]">
               Mount Carmel School
             </h1>
-            <p className="text-xs text-slate-500">Learning with vision</p>
+            <p className="truncate text-[11px] text-slate-500 sm:text-xs">
+              Learning with vision
+            </p>
           </div>
         </Link>
 
         <nav
           aria-label="Main navigation"
-          className="hidden items-center gap-1 rounded-full border border-slate-200/80 bg-white/85 px-2 py-2 shadow-sm md:flex"
+          className="hidden items-center gap-1 rounded-full border border-slate-200/70 bg-white/80 px-2 py-2 shadow-sm backdrop-blur md:flex"
         >
           {navLinks.map((link) => {
             const active = location.pathname === link.path;
@@ -99,7 +104,7 @@ export default function Header() {
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
                   active
                     ? "bg-slate-300 text-white shadow-sm"
-                    : "text-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                 }`}
                 aria-current={active ? "page" : undefined}
               >
@@ -113,7 +118,7 @@ export default function Header() {
           ref={menuButtonRef}
           type="button"
           onClick={() => setIsOpen((v) => !v)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-slate-900/20 md:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
@@ -123,13 +128,17 @@ export default function Header() {
       </div>
 
       <div
-        id="mobile-menu"
-        ref={mobileMenuRef}
-        className={`border-t border-slate-200 bg-white/95 px-4 pb-5 pt-3 shadow-lg backdrop-blur-xl md:hidden ${
-          isOpen ? "block" : "hidden"
+        className={`md:hidden overflow-hidden border-t border-slate-200/70 bg-white/95 backdrop-blur-xl transition-all duration-300 ${
+          isOpen
+            ? "max-h-[80vh] opacity-100"
+            : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-2">
+        <div
+          id="mobile-menu"
+          ref={mobileMenuRef}
+          className="mx-auto flex max-w-7xl flex-col gap-2 px-4 pb-5 pt-3 sm:px-6"
+        >
           {navLinks.map((link, index) => {
             const active = location.pathname === link.path;
 
@@ -141,7 +150,7 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 className={`rounded-2xl px-4 py-3 text-sm font-medium transition-all duration-200 ${
                   active
-                    ? "bg-slate-900 text-white"
+                    ? "bg-slate-300 text-white shadow-md"
                     : "bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                 }`}
                 aria-current={active ? "page" : undefined}

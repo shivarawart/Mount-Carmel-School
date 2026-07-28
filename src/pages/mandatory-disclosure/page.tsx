@@ -6,7 +6,7 @@ import {
   FileText,
   FileSpreadsheet,
   Eye,
-  Download,
+  // Download,
   X,
 } from "lucide-react";
 import gsap from "gsap";
@@ -206,7 +206,6 @@ const FileCard = ({
   onView: (f: FileItem) => void;
 }) => (
   <div className="group relative bg-white/70 backdrop-blur-xl border border-white/40 rounded-2xl p-5 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between overflow-hidden">
-
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-indigo-500/10 blur-2xl transition rounded-2xl" />
 
     <div className="relative z-10">
@@ -225,22 +224,51 @@ const FileCard = ({
       </div>
     </div>
 
-    <div className="relative z-10 flex gap-2 mt-4">
+    <div className="relative z-10 mt-6">
       <button
         onClick={() => onView(file)}
-        className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 text-sm transition"
+        className="
+      group
+      relative
+      flex
+      w-full
+      items-center
+      justify-center
+      gap-3
+      overflow-hidden
+      rounded-2xl
+      bg-gradient-to-r
+      from-blue-600
+      via-indigo-600
+      to-violet-600
+      px-5
+      py-3.5
+      font-semibold
+      text-white
+      shadow-lg
+      shadow-blue-500/20
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:scale-[1.02]
+      hover:shadow-2xl
+      hover:shadow-blue-500/30
+      active:scale-[0.98]
+    "
       >
-        <Eye size={16} /> View
-      </button>
+        {/* Animated Glow */}
+        <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-      <a
-        href={`https://drive.google.com/uc?export=download&id=${file.fileId}`}
-        className="flex-1"
-      >
-        <button className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 text-sm transition">
-          <Download size={16} /> Download
-        </button>
-      </a>
+        {/* Shine Effect */}
+        <span className="absolute -left-20 top-0 h-full w-16 rotate-12 bg-white/30 blur-md transition-all duration-700 group-hover:left-[120%]" />
+
+        <Eye
+          size={18}
+          className="relative transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+        />
+
+        <span className="relative">View Details</span>
+      </button>
     </div>
   </div>
 );
@@ -460,78 +488,78 @@ export default function MandatoryDisclosurePage({
             {/* Background Glow */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-80 w-80 rounded-full bg-blue-500/10 blur-[140px]" />
 
-            <div className="relative grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-              {[
-                {
-                  value: "900+",
-                  label: "Students",
-                  icon: "🎓",
-                  color: "from-blue-500 to-cyan-500",
-                },
-                {
-                  value: "40+",
-                  label: "Qualified Faculty",
-                  icon: "👨‍🏫",
-                  color: "from-indigo-500 to-blue-600",
-                },
-                {
-                  value: "100%",
-                  label: "Board Results",
-                  icon: "🏆",
-                  color: "from-sky-500 to-cyan-500",
-                },
-                {
-                  value: "8+",
-                  label: "Years of Excellence",
-                  icon: "⭐",
-                  color: "from-violet-500 to-indigo-600",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="group relative overflow-hidden rounded-[28px] border border-slate-200/70 bg-white/80 backdrop-blur-xl p-8 transition-all duration-700 hover:-translate-y-3 hover:border-blue-200 hover:shadow-[0_30px_80px_rgba(59,130,246,0.18)]"
-                >
-                  {/* Gradient Glow */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 transition-opacity duration-700 group-hover:opacity-[0.05]`}
-                  />
+             <div className="relative grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+  {[
+    {
+      value: "40+",
+      label: "Qualified Faculty",
+      icon: "👨‍🏫",
+      color: "from-indigo-500 via-blue-500 to-cyan-500",
+    },
+    {
+      value: "100%",
+      label: "Board Results",
+      icon: "🏆",
+      color: "from-emerald-500 via-green-500 to-teal-500",
+    },
+    {
+      value: "8+",
+      label: "Years of Excellence",
+      icon: "⭐",
+      color: "from-violet-500 via-fuchsia-500 to-pink-500",
+    },
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden rounded-3xl border border-white/40 bg-white/70 p-8 backdrop-blur-xl transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_35px_80px_rgba(37,99,235,0.18)]"
+    >
+      {/* Animated Gradient Border */}
+      <div
+        className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.color} opacity-0 blur-xl transition duration-700 group-hover:opacity-20`}
+      />
 
-                  {/* Decorative Circle */}
-                  <div
-                    className={`absolute -right-10 -top-10 h-28 w-28 rounded-full bg-gradient-to-br ${item.color} opacity-10 blur-2xl`}
-                  />
+      {/* Decorative Blob */}
+      <div
+        className={`absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gradient-to-br ${item.color} opacity-15 blur-3xl`}
+      />
 
-                  {/* Icon */}
-                  <div
-                    className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${item.color} text-3xl shadow-lg transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110`}
-                  >
-                    {item.icon}
-                  </div>
+      {/* Floating Icon */}
+      <div
+        className={`relative flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${item.color} text-4xl text-white shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6`}
+      >
+        {item.icon}
+      </div>
 
-                  {/* Number */}
-                  <h3
-                    className={`mt-8 bg-gradient-to-r ${item.color} bg-clip-text text-5xl font-black tracking-tight text-transparent`}
-                  >
-                    {item.value}
-                  </h3>
+      {/* Number */}
+      <h2
+        className={`relative mt-8 bg-gradient-to-r ${item.color} bg-clip-text text-6xl font-black tracking-tight text-transparent`}
+      >
+        {item.value}
+      </h2>
 
-                  {/* Label */}
-                  <p className="mt-3 text-lg font-semibold text-slate-800">
-                    {item.label}
-                  </p>
+      {/* Label */}
+      <p className="mt-3 text-xl font-bold text-slate-900">
+        {item.label}
+      </p>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
-                    Delivering excellence through quality education, dedicated
-                    faculty, and a future-focused learning environment.
-                  </p>
+      {/* Description */}
+      <p className="mt-3 max-w-xs text-[15px] leading-7 text-slate-600">
+        Empowering students with innovative teaching, experienced educators,
+        and consistent academic excellence.
+      </p>
 
-                  {/* Bottom Line */}
-                  <div
-                    className={`mt-8 h-1 w-0 rounded-full bg-gradient-to-r ${item.color} transition-all duration-700 group-hover:w-full`}
-                  />
-                </div>
-              ))}
-            </div>
+      {/* Bottom Progress */}
+      <div className="mt-8 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+        <div
+          className={`h-full w-0 rounded-full bg-gradient-to-r ${item.color} transition-all duration-700 group-hover:w-full`}
+        />
+      </div>
+
+      {/* Floating Badge */}
+      
+    </div>
+  ))}
+             </div>
           </div>
 
           {/* 📂 INFO CARDS */}

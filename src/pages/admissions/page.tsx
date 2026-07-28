@@ -22,7 +22,7 @@ const documents = [
   "Birth Certificate",
   "Previous Class Report Card",
   "Passport Size Photographs",
-  "PEN CARD",
+  "PEN No",
   "SLC of previous school",
   "Child & Parents Adhar card",
   "Family id",

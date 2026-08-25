@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 // --- Types ---
 type FileItem = {
   name: string;
-  type: "pdf" | "excel" | "doc"; 
+  type: "pdf" | "excel" | "doc";
   fileId: string;
 };
 
@@ -121,8 +121,7 @@ const data: FolderType[] = [
       {
         name: "TGT Staff",
         type: "pdf",
-        fileId:
-          "17645eoy4jNKIhMaCVDESD9aH1_qigrNU",
+        fileId: "17645eoy4jNKIhMaCVDESD9aH1_qigrNU",
       },
       {
         name: "PRT Staff",
@@ -168,7 +167,7 @@ const data: FolderType[] = [
       {
         name: "Hygienic Certificate",
         type: "pdf",
-        fileId: "10n0iRDEU56tN72I7ylt_mreZGEMfTyhW",
+        fileId: "1xAWRnGem-ffUI-S90q9-LVAjr9FpaFZO",
       },
       {
         name: " School Infrastructure Details",
@@ -189,13 +188,6 @@ const data: FolderType[] = [
     ],
   },
 ];
-
-
-
-
-
-
-
 
 // --- File Card ---
 const FileCard = ({
@@ -282,9 +274,7 @@ const PreviewModal = ({
   onClose: () => void;
 }) => (
   <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center p-2 sm:p-6">
-
     <div className="bg-white w-full max-w-6xl h-[90vh] sm:h-[85vh] rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col">
-
       <div className="flex justify-between items-center px-4 sm:px-6 py-3 border-b">
         <h3 className="font-semibold text-sm sm:text-lg truncate">
           {file.name}
@@ -335,7 +325,7 @@ export default function MandatoryDisclosurePage({
               trigger: el,
               start: "top 90%",
             },
-          }
+          },
         );
       });
     }, pageRef);
@@ -344,7 +334,7 @@ export default function MandatoryDisclosurePage({
   }, []);
 
   const filtered = activeFolder.files.filter((f) =>
-    f.name.toLowerCase().includes(search.toLowerCase())
+    f.name.toLowerCase().includes(search.toLowerCase()),
   );
 
   return (
@@ -449,15 +439,15 @@ export default function MandatoryDisclosurePage({
 
                   <div className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] border border-slate-200 bg-white shadow-2xl">
                     <div className="aspect-video w-full">
-     <a
-                      href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src="/changeimg/mountcarmel.png"
-                        alt="Mount Carmel School Thumbnail"
-                        className="h-full w-full object-auto"
+                      <a
+                        href="https://youtu.be/n_K1pH4Q9ls?si=YlY5KYuZIQzQfDa_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src="/changeimg/mountcarmel.png"
+                          alt="Mount Carmel School Thumbnail"
+                          className="h-full w-full object-auto"
                         />
                       </a>
                     </div>
@@ -488,78 +478,77 @@ export default function MandatoryDisclosurePage({
             {/* Background Glow */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-80 w-80 rounded-full bg-blue-500/10 blur-[140px]" />
 
-             <div className="relative grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-  {[
-    {
-      value: "40+",
-      label: "Qualified Faculty",
-      icon: "👨‍🏫",
-      color: "from-indigo-500 via-blue-500 to-cyan-500",
-    },
-    {
-      value: "100%",
-      label: "Board Results",
-      icon: "🏆",
-      color: "from-emerald-500 via-green-500 to-teal-500",
-    },
-    {
-      value: "8+",
-      label: "Years of Excellence",
-      icon: "⭐",
-      color: "from-violet-500 via-fuchsia-500 to-pink-500",
-    },
-  ].map((item, index) => (
-    <div
-      key={index}
-      className="group relative overflow-hidden rounded-3xl border border-white/40 bg-white/70 p-8 backdrop-blur-xl transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_35px_80px_rgba(37,99,235,0.18)]"
-    >
-      {/* Animated Gradient Border */}
-      <div
-        className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.color} opacity-0 blur-xl transition duration-700 group-hover:opacity-20`}
-      />
+            <div className="relative grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  value: "40+",
+                  label: "Qualified Faculty",
+                  icon: "👨‍🏫",
+                  color: "from-indigo-500 via-blue-500 to-cyan-500",
+                },
+                {
+                  value: "100%",
+                  label: "Board Results",
+                  icon: "🏆",
+                  color: "from-emerald-500 via-green-500 to-teal-500",
+                },
+                {
+                  value: "8+",
+                  label: "Years of Excellence",
+                  icon: "⭐",
+                  color: "from-violet-500 via-fuchsia-500 to-pink-500",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-3xl border border-white/40 bg-white/70 p-8 backdrop-blur-xl transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_35px_80px_rgba(37,99,235,0.18)]"
+                >
+                  {/* Animated Gradient Border */}
+                  <div
+                    className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.color} opacity-0 blur-xl transition duration-700 group-hover:opacity-20`}
+                  />
 
-      {/* Decorative Blob */}
-      <div
-        className={`absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gradient-to-br ${item.color} opacity-15 blur-3xl`}
-      />
+                  {/* Decorative Blob */}
+                  <div
+                    className={`absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gradient-to-br ${item.color} opacity-15 blur-3xl`}
+                  />
 
-      {/* Floating Icon */}
-      <div
-        className={`relative flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${item.color} text-4xl text-white shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6`}
-      >
-        {item.icon}
-      </div>
+                  {/* Floating Icon */}
+                  <div
+                    className={`relative flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${item.color} text-4xl text-white shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6`}
+                  >
+                    {item.icon}
+                  </div>
 
-      {/* Number */}
-      <h2
-        className={`relative mt-8 bg-gradient-to-r ${item.color} bg-clip-text text-6xl font-black tracking-tight text-transparent`}
-      >
-        {item.value}
-      </h2>
+                  {/* Number */}
+                  <h2
+                    className={`relative mt-8 bg-gradient-to-r ${item.color} bg-clip-text text-6xl font-black tracking-tight text-transparent`}
+                  >
+                    {item.value}
+                  </h2>
 
-      {/* Label */}
-      <p className="mt-3 text-xl font-bold text-slate-900">
-        {item.label}
-      </p>
+                  {/* Label */}
+                  <p className="mt-3 text-xl font-bold text-slate-900">
+                    {item.label}
+                  </p>
 
-      {/* Description */}
-      <p className="mt-3 max-w-xs text-[15px] leading-7 text-slate-600">
-        Empowering students with innovative teaching, experienced educators,
-        and consistent academic excellence.
-      </p>
+                  {/* Description */}
+                  <p className="mt-3 max-w-xs text-[15px] leading-7 text-slate-600">
+                    Empowering students with innovative teaching, experienced
+                    educators, and consistent academic excellence.
+                  </p>
 
-      {/* Bottom Progress */}
-      <div className="mt-8 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
-        <div
-          className={`h-full w-0 rounded-full bg-gradient-to-r ${item.color} transition-all duration-700 group-hover:w-full`}
-        />
-      </div>
+                  {/* Bottom Progress */}
+                  <div className="mt-8 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+                    <div
+                      className={`h-full w-0 rounded-full bg-gradient-to-r ${item.color} transition-all duration-700 group-hover:w-full`}
+                    />
+                  </div>
 
-      {/* Floating Badge */}
-      
-    </div>
-  ))}
-             </div>
+                  {/* Floating Badge */}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* 📂 INFO CARDS */}

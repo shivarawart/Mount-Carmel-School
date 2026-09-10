@@ -143,6 +143,11 @@ const data: FolderType[] = [
         type: "pdf",
         fileId: "12cXhnMiFfFz8QsOjyMSqLAzfr0uiqPgh",
       },
+      {
+        name: "NEW Staff Details",
+        type: "pdf",
+        fileId: "1x-ceBXgc7_T-YTddCvf8UNmCyIAAlayv",
+      },
     ],
   },
 
@@ -152,7 +157,7 @@ const data: FolderType[] = [
       {
         name: "Building Safety Certificate",
         type: "pdf",
-        fileId: "1UYG1Bczzdfe7jnlpybkGizihR62heLdy",
+        fileId: "1hIVvYzKvT4irhEV7rI7jdZ3fWa8VfRlK",
       },
       {
         name: "Fees Structure",

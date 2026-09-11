@@ -157,7 +157,8 @@ const data: FolderType[] = [
       {
         name: "Building Safety Certificate",
         type: "pdf",
-        fileId: "1hIVvYzKvT4irhEV7rI7jdZ3fWa8VfRlK",
+        fileId:
+          "1PxISLciDyUWhmn-d7kg8MtWlQ-duJs0e",
       },
       {
         name: "Fees Structure",

@@ -114,29 +114,35 @@ const data: FolderType[] = [
         fileId: "1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-",
       },
       {
+        name: "PTI",
+        type: "pdf",
+        fileId: "1Im7HQrsTXKgbMpVeqw5byR2l96p5bKkv",
+      },
+      {
         name: "PGT Staff",
         type: "pdf",
-        fileId: "1WoYOUlMXXrAN_SBCi9vS8xqQ18IRtSUT",
+        fileId: "1iLxID-u5VD9jyNlf_dD9zHNHLvL7Q0u0",
       },
       {
         name: "TGT Staff",
         type: "pdf",
-        fileId: "17645eoy4jNKIhMaCVDESD9aH1_qigrNU",
+        fileId: "1Im7HQrsTXKgbMpVeqw5byR2l96p5bKkv",
       },
       {
         name: "PRT Staff",
         type: "pdf",
-        fileId: "1LMvbfr9lW6yMfPwhCeeceDOt-E6aw54d",
+        fileId: "1xXQMSnpFegQoknwiYJ3DCBtxgaVQiERI",
       },
       {
         name: "NTT Staff",
         type: "pdf",
-        fileId: "1XgpeQncTBqveKNMxrk2VOECN1UQJtTOl",
+        fileId: "1xXQMSnpFegQoknwiYJ3DCBtxgaVQiERI",
       },
       {
         name: "Other Staff",
         type: "pdf",
-        fileId: "10MTECYIoBcaXzi5rytnMcSvfnLVbo-Mw",
+        fileId:
+          "1GpiX1hOAULv8Y3rwAI4tbq5kJhgGQTBu",
       },
       {
         name: "Management Committee",
@@ -157,8 +163,7 @@ const data: FolderType[] = [
       {
         name: "Building Safety Certificate",
         type: "pdf",
-        fileId:
-          "1PxISLciDyUWhmn-d7kg8MtWlQ-duJs0e",
+        fileId: "1PxISLciDyUWhmn-d7kg8MtWlQ-duJs0e",
       },
       {
         name: "Fees Structure",

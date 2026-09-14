@@ -64,7 +64,7 @@ const data: FolderType[] = [
       {
         name: "Land Certificate",
         type: "pdf",
-        fileId: "1jHUItZ3DOpWYwJuPoX2Gz9EetZU9xMoc",
+        fileId: "15cfGGxzTKLsD9BdxWsQ1gFsrkrcJgs1E",
       },
     ],
   },
@@ -121,12 +121,12 @@ const data: FolderType[] = [
       {
         name: "PGT Staff",
         type: "pdf",
-        fileId: "1iLxID-u5VD9jyNlf_dD9zHNHLvL7Q0u0",
+        fileId: "1W8BritSut6bV3jVmHFFvXWDukOL4I0pU",
       },
       {
         name: "TGT Staff",
         type: "pdf",
-        fileId: "1Im7HQrsTXKgbMpVeqw5byR2l96p5bKkv",
+        fileId: "18uTyiNMGedtB0BfJU1GFAS9ARmdcPQ2O",
       },
       {
         name: "PRT Staff",
@@ -136,13 +136,13 @@ const data: FolderType[] = [
       {
         name: "NTT Staff",
         type: "pdf",
-        fileId: "1xXQMSnpFegQoknwiYJ3DCBtxgaVQiERI",
+        fileId: "1rfK51mJiZ2wBdtod8EOOnvQ3vXFwH087",
       },
       {
         name: "Other Staff",
         type: "pdf",
         fileId:
-          "1GpiX1hOAULv8Y3rwAI4tbq5kJhgGQTBu",
+          "1_4wrrw61m2Zd5Tfemzh5uWzec-K7DwWf",
       },
       {
         name: "Management Committee",

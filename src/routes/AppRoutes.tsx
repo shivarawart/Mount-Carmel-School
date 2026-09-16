@@ -44,6 +44,7 @@ export default function AppRoutes() {
         <Route path='/CreativeGrowth' element={ <CreativeGrowth />} />
         <Route path='/SafeEnvironment' element={ <SafeEnvironment />} />
         <Route path='/SmartLabs' element={<SmartLabs />} />
+        
         <Route path='SportsArena' element={ <SportsArena />} />
         <Route path="*" element={<Navigate to="/" />} />
 

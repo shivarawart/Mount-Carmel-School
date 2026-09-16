@@ -141,8 +141,7 @@ const data: FolderType[] = [
       {
         name: "Other Staff",
         type: "pdf",
-        fileId:
-          "1_4wrrw61m2Zd5Tfemzh5uWzec-K7DwWf",
+        fileId: "1_4wrrw61m2Zd5Tfemzh5uWzec-K7DwWf",
       },
       {
         name: "Management Committee",
@@ -163,7 +162,7 @@ const data: FolderType[] = [
       {
         name: "Building Safety Certificate",
         type: "pdf",
-        fileId: "1PxISLciDyUWhmn-d7kg8MtWlQ-duJs0e",
+        fileId: "1rlZJp3tPu1NunPy9pY-eS8nhno2XUGKN",
       },
       {
         name: "Fees Structure",
@@ -181,9 +180,19 @@ const data: FolderType[] = [
         fileId: "1xAWRnGem-ffUI-S90q9-LVAjr9FpaFZO",
       },
       {
-        name: " School Infrastructure Details",
+        name: " School Infrastructure",
         type: "pdf",
         fileId: "15tzHxqC9BOcxtiVnskKEPQO1z3VOE7MD",
+      },
+    ],
+  },
+  {
+    name: "Public Mandatory-disclosure",
+    files: [
+      {
+        name: "Public Disclosure",
+        type: "pdf",
+        fileId: "1M_INPl6e1IXWSU5TCrnTMiCZrlSoaCwD",
       },
     ],
   },

@@ -89,7 +89,7 @@ const featureItems: FeatureItem[] = [
     image: "/views/AnnualCelebration/img19.jpg",
     badge: "Campus Life",
     accent: "from-pink-500 via-rose-500 to-red-500",
-    href: "/AnnualCelebrations",
+    href: "/Annual-Day",
   },
 ];
 

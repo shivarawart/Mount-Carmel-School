@@ -194,6 +194,27 @@ const data: FolderType[] = [
         type: "pdf",
         fileId: "1M_INPl6e1IXWSU5TCrnTMiCZrlSoaCwD",
       },
+      {
+        name: "School Leaving certificate",
+        type: "pdf",
+        fileId: "1ozBVKk0mff9fSxPFKnvYBd5aMu8vd_zf",
+      },
+      {
+        name: "Teacher Training (2025-26)",
+        type: "pdf",
+        fileId: "175SC4d1aXTh-SGkP4AUjPdXXDmCfR33x",
+      },
+      {
+        name: "Teacher Training (2026-27)",
+        type: "pdf",
+        fileId: "1yprrZWFw3M2PgJZHWZqOdRfivpzAublZ",
+      },
+      {
+        name: "Transfer certificate",
+        type: "pdf",
+        fileId:
+          "1dvdkIFFXt8SQ35wpyFi3Q76iSg_Tibou",
+      },
     ],
   },
 

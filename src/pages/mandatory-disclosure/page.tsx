@@ -111,37 +111,37 @@ const data: FolderType[] = [
       {
         name: "Staff Details",
         type: "pdf",
-        fileId: "1eG9mb_V8ld9J2WRduZALG-EOeUkIPRw-",
+        fileId: "1IhJPt5u2LCr0FD7a7kWnuAkJ_PyJkTMo",
       },
       {
         name: "PTI",
         type: "pdf",
-        fileId: "1Im7HQrsTXKgbMpVeqw5byR2l96p5bKkv",
+        fileId: "1x-gI1SV_xT-fxOvqM7kSJ3326mnSrE7o",
       },
       {
         name: "PGT Staff",
         type: "pdf",
-        fileId: "1W8BritSut6bV3jVmHFFvXWDukOL4I0pU",
+        fileId: "1-_g-zkkKCW2z6tAxL3sNC7utJy9FK7zG",
       },
       {
         name: "TGT Staff",
         type: "pdf",
-        fileId: "18uTyiNMGedtB0BfJU1GFAS9ARmdcPQ2O",
+        fileId: "1BCHDclByDgtsPg-RXlavaHNWuUQqAyPk",
       },
       {
         name: "PRT Staff",
         type: "pdf",
-        fileId: "1xXQMSnpFegQoknwiYJ3DCBtxgaVQiERI",
+        fileId: "1WchKeCqqTpTdZOCITDv2p-haMOPfHVof",
       },
       {
         name: "NTT Staff",
         type: "pdf",
-        fileId: "1rfK51mJiZ2wBdtod8EOOnvQ3vXFwH087",
+        fileId: "1MZQHM5w_FpvUKwyXKxnmj0Cq3gIqY8ap",
       },
       {
-        name: "Other Staff",
+        name: "CAREER COUNSELLOR",
         type: "pdf",
-        fileId: "1_4wrrw61m2Zd5Tfemzh5uWzec-K7DwWf",
+        fileId: "18Xv3f9PvgJOZw2A0DdLyNS92mFLEqfRr",
       },
       {
         name: "Management Committee",
@@ -152,6 +152,11 @@ const data: FolderType[] = [
         name: "NEW Staff Details",
         type: "pdf",
         fileId: "1x-ceBXgc7_T-YTddCvf8UNmCyIAAlayv",
+      },
+      {
+        name: " LIBRARIAN",
+        type: "pdf",
+        fileId: "1pg3x7mZjMQsnQEsE-1lJp2S-3HWe6Y-S",
       },
     ],
   },
@@ -212,8 +217,17 @@ const data: FolderType[] = [
       {
         name: "Transfer certificate",
         type: "pdf",
-        fileId:
-          "1dvdkIFFXt8SQ35wpyFi3Q76iSg_Tibou",
+        fileId: "1dvdkIFFXt8SQ35wpyFi3Q76iSg_Tibou",
+      },
+      {
+        name: " Mci curriculum",
+        type: "pdf",
+        fileId: "1VOEb0RNszlcPj_Cs1x2QhKq-d4ac1-6H",
+      },
+      {
+        name: " Transfer certificate",
+        type: "pdf",
+        fileId: "1mvt0rBAdlosYHplN5CaWQrOYQjXIL9lW",
       },
     ],
   },
@@ -225,6 +239,12 @@ const data: FolderType[] = [
         name: "Fire Safety Certificate",
         type: "pdf",
         fileId: "18BUI-YutYDi3cThOzD80T2_45AXf1n2s",
+      },
+      {
+        name: "Class Details",
+        type:"pdf",
+        fileId:
+          "1GZBmp1t1fhLcAuDuutal92MlIsXPstev",
       },
     ],
   },

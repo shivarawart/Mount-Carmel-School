@@ -240,12 +240,7 @@ const data: FolderType[] = [
         type: "pdf",
         fileId: "18BUI-YutYDi3cThOzD80T2_45AXf1n2s",
       },
-      {
-        name: "Class Details",
-        type:"pdf",
-        fileId:
-          "1GZBmp1t1fhLcAuDuutal92MlIsXPstev",
-      },
+     
     ],
   },
 ];

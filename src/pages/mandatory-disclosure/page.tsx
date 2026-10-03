@@ -109,11 +109,6 @@ const data: FolderType[] = [
     name: "Staff & Administration",
     files: [
       {
-        name: "Staff Details",
-        type: "pdf",
-        fileId: "1IhJPt5u2LCr0FD7a7kWnuAkJ_PyJkTMo",
-      },
-      {
         name: "PTI",
         type: "pdf",
         fileId: "1x-gI1SV_xT-fxOvqM7kSJ3326mnSrE7o",
@@ -121,22 +116,23 @@ const data: FolderType[] = [
       {
         name: "PGT Staff",
         type: "pdf",
-        fileId: "1-_g-zkkKCW2z6tAxL3sNC7utJy9FK7zG",
+        fileId: "1gbUwouyM5rajN-dHR7g3rGCTD691wR50",
       },
       {
         name: "TGT Staff",
         type: "pdf",
-        fileId: "1BCHDclByDgtsPg-RXlavaHNWuUQqAyPk",
+        fileId:
+          "1R92U--yv80RL6M2KcANHDRtC2vh6ivo9",
       },
       {
         name: "PRT Staff",
         type: "pdf",
-        fileId: "1WchKeCqqTpTdZOCITDv2p-haMOPfHVof",
+        fileId: "1AOKO3TKHy3_ElF1EXTWlPmHm-hRaNINM",
       },
       {
         name: "NTT Staff",
         type: "pdf",
-        fileId: "1MZQHM5w_FpvUKwyXKxnmj0Cq3gIqY8ap",
+        fileId: "1iUsZJJC9mOElR_I7aRjt3W_mjnOgToQY",
       },
       {
         name: "CAREER COUNSELLOR",
@@ -224,11 +220,6 @@ const data: FolderType[] = [
         type: "pdf",
         fileId: "1VOEb0RNszlcPj_Cs1x2QhKq-d4ac1-6H",
       },
-      {
-        name: " Transfer certificate",
-        type: "pdf",
-        fileId: "1mvt0rBAdlosYHplN5CaWQrOYQjXIL9lW",
-      },
     ],
   },
 
@@ -240,7 +231,6 @@ const data: FolderType[] = [
         type: "pdf",
         fileId: "18BUI-YutYDi3cThOzD80T2_45AXf1n2s",
       },
-     
     ],
   },
 ];

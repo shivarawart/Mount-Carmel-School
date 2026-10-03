@@ -37,7 +37,6 @@ const Footer = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 py-14 grid gap-10 lg:grid-cols-3">
-
         {/* School Info */}
         <div className="reveal space-y-4">
           <h2 className="text-2xl font-bold leading-snug">
@@ -70,7 +69,7 @@ const Footer = () => {
             >
               <FaWhatsapp />
             </a> */}
-          </div> 
+          </div>
         </div>
 
         {/* Contact Info */}
@@ -92,16 +91,21 @@ const Footer = () => {
         {/* Mini Map */}
         <div className="reveal w-full h-[220px] rounded-2xl overflow-hidden border border-white/10">
           <iframe
-            src="https://maps.google.com/maps?q=narayangarh%20haryana&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            className="w-full h-full border-0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30766677.28961031!2d60.971722481457405!3d19.725481402166906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fa70d57a8ee2d%3A0xa2f359202cf13feb!2sMount%20Carmel%20International%20school%20naraingarh!5e0!3m2!1sen!2sin!4v1791034081844!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            
+        
             loading="lazy"
+          
           ></iframe>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="relative border-t border-white/10 text-center text-sm text-gray-400 py-4 backdrop-blur">
-        © {new Date().getFullYear()} Mount Carmel International School — All Rights Reserved by shiva
+        © {new Date().getFullYear()} Mount Carmel International School — All
+        Rights Reserved by shiva
       </div>
     </footer>
   );

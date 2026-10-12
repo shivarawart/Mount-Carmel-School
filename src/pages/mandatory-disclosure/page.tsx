@@ -64,7 +64,8 @@ const data: FolderType[] = [
       {
         name: "Land Certificate",
         type: "pdf",
-        fileId: "15cfGGxzTKLsD9BdxWsQ1gFsrkrcJgs1E",
+        fileId:
+          "1OJoxwU80BQlX2XP3hbRQogvja2V0DzJG",
       },
     ],
   },
@@ -121,8 +122,7 @@ const data: FolderType[] = [
       {
         name: "TGT Staff",
         type: "pdf",
-        fileId:
-          "1R92U--yv80RL6M2KcANHDRtC2vh6ivo9",
+        fileId: "1R92U--yv80RL6M2KcANHDRtC2vh6ivo9",
       },
       {
         name: "PRT Staff",
